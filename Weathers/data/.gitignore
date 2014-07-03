@@ -1,0 +1,5 @@
+ngi.weather.getForcast_*.txt
+ngi.weather.getIndices_*.txt
+ngi.weather.getSunInfo_*.txt
+gm.ngi.weathers.provinces_users.txt
+gm.ngi.weathers.provinces_default.txt

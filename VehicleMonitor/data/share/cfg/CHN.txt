@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "description": "转速提醒"
+    },
+    {
+        "id": 1,
+        "description": "冷却液温度提醒"
+    },
+    {
+        "id": 2,
+        "description": "变速箱油温提醒"
+    },
+    {
+        "id": 3,
+        "description": "胎压提醒"
+    },
+    {
+        "id": 4,
+        "description": "超速提醒"
+    }
+]

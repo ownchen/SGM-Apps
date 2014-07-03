@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment targetId="mtw.filesystem" typeId="org.symbian.tools.tmw.fileSystem">&#x0A;<target path="workspace/VehicleMonitor.zip" targetId="mtw.filesystem" typeId="org.symbian.tools.tmw.fileSystem"/>&#x0A;</deployment>

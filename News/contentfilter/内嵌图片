@@ -1,0 +1,15 @@
+现象：正文中内嵌图片
+正则：/<div class="img_wrapper">[\s\S]*<\/div>/gi
+
+
+样例：http://tech.sina.com.cn/it/2012-04-11/19166941245.shtml
+
+<div class="img_wrapper"><img alt="苹果正开发iTunes 11：支持iOS 6整合iCloud" src="http://www.sinaimg.cn/IT/2012/0411/U6349P2DT20120411191352.png" title="苹果正开发iTunes 11：支持iOS 6整合iCloud" /><span class="img_descr">苹果正开发iTunes 11：支持iOS 6整合iCloud</span></div>
+
+<p>　　新浪科技讯 北京时间4月11日晚间消息，知情人士透露，苹果正在开发新版iTunes应用，即iTunes 11。</p>
+
+<p>　　该消息称，在苹果推出iTunes 10.6之前，苹果就已经着手开发iTunes 11。当前iTunes 11的开发主要集中在深层变化上，而并非用户界面等表面上的变化。但苹果的产品通常由不同的部门开发，或在不同的时间内开发，因此不排除将来的iTunes 11正式版在用户界面或其他方面有明显改善。</p>
+
+<p>　　该知情人士还称，正在开发之中的iTunes 11是针对即将发布的iOS 6移动平台而开发。通常，苹果在推出新版移动操作系统和移动设备的同时发布新版iTunes应用，而iTunes 11正是为iOS 6设备而量身打造。另有消息称，在发布iTunes 11前，苹果可能率先对iTunes 10.X进行更新，从而来支持iOS 6。</p>
+
+<p>　　此外，iTunes 11还强化了对iCloud云服务的整合，最有力的证明是为iCloud设计了一专门的设置面板，用户通过该面板可以设置iCloud的相关功能，包括 iTunes Match、iTunes in Cloud，以及iCloud iOS设备备份等。(李明)</p>

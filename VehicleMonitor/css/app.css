@@ -1,0 +1,624 @@
+/* app css stylesheet */
+
+body, .background {
+    width: 800px;
+  /*  margin-top: 39px;
+   	background-position: 0 39px;
+  */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-weight: normal;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    -webkit-user-select: none;
+}
+
+#indexBody, .background{
+    background-image: url(../img/loading.png);
+    background-size:100% 100%;
+}
+
+#appBody {
+    background-image: url(../img/bgLoading.png);
+   	background-size:100% 100%;
+}
+
+.popup {
+    text-align: center;
+    position: fixed;
+}
+
+/*loading page*/
+.loadingDiv {
+	  width: 100%;
+	  height: 442px;
+	  top: 0px;
+	  left: 0px;
+	  postion: absolute;
+	  z-index: 11;
+	  display: block;
+	  animation-name:loading;
+	  animation-duration:10s;
+	  animation-timing-function:linear;
+	  animation-delay:0s;
+	  animation-iteration-count:1;
+	  animation-direction:normal;
+	  animation-play-state:running;
+	  /* Firefox: */
+	  -moz-animation-name:loading;
+	  -moz-animation-duration:10s;
+	  -moz-animation-timing-function:linear;
+	  -moz-animation-delay:0s;
+	  -moz-animation-iteration-count:1;
+	  -moz-animation-direction:normal;
+	  -moz-animation-play-state:running;
+	  /* Safari and Chrome: */
+	  -webkit-animation-name:loading;
+	  -webkit-animation-duration:10s;
+	  -webkit-animation-timing-function:linear;
+	  -webkit-animation-delay:0s;
+	  -webkit-animation-iteration-count:1;
+	  -webkit-animation-direction:normal;
+	  -webkit-animation-play-state:running;
+	  /* Opera: */
+	  -o-animation-name:loading;
+	  -o-animation-duration:10s;
+	  -o-animation-timing-function:linear;
+	  -o-animation-delay:0s;
+	  -o-animation-iteration-count:1;
+	  -o-animation-direction:normal;
+	  -o-animation-play-state:running;
+}
+
+#loadingImg {
+	 width: 100%;
+	 height: 100%;
+}
+
+/*鼠标hover样式*/
+@-webkit-keyframes loading { 
+	  0% { opacity: 0; }
+	  20% { opacity: 1; }
+	  40% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes loading { 
+	  0% { opacity: 0; }
+	  20% { opacity: 1; }
+	  40% { opacity: 1; }
+	  60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@-o-keyframes loading { 
+	  0% { opacity: 0; }
+	  20% { opacity: 1; }
+	  40% { opacity: 1; }
+	  60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes loading { 
+	  0% { opacity: 0; }
+	  20% { opacity: 1; }
+	  40% { opacity: 1; }
+	  60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+/*多层div实现垂直居中*/
+.div_center_bg {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.div_center {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+
+.customerbtn {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: thin none transparent;
+}
+
+div#top {
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+}
+
+div#static_middle {
+    width: 100%;
+    height: 332px;
+}
+
+div#moving_middle {
+    width: 100%;
+    height: 310px;
+}
+
+div#bottom {
+    width: 100%;
+    height: 25px;
+    padding-left: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.toppart {
+    height: 100%;
+    float: left;
+}
+
+div#datedomain {
+    width: 50%;
+    padding-left: 5%;
+}
+
+img#dayimg {
+    margin-top: 15px;
+    float: left;
+}
+
+div#date {
+	 width: 250px;
+	 margin-left: 10px;
+	 margin-top: 10px;
+    font-size: 40px;
+    font-family: times;
+    color: white;
+    float: left;
+}
+
+img#alerticon {
+	  width: 60px;
+	  height: 60px;
+    margin-left: 10px;
+    margin-top: 5px;
+	  float: left;
+}
+
+div#warncfgdomain {
+    width: 25%;
+}
+
+button#warn_config_btn {
+    background-image: url(../img/static/warn_config.png);
+    width: 150px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+div#exitdomain {
+    width: 18%;
+    text-align: right;
+}
+
+button#exit_app_btn {
+    background-image: url(../img/exit.png);
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.middlepart {
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+
+.module_value {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-family: arial;
+    color: white;
+}
+
+/*
+div#static_engine_speed {
+  left: 0px;
+  height: 260px;
+}
+*/
+
+div#static_engine_speed_value {
+    margin-top: -120px;
+    font-size: 40px;
+}
+
+img#static_engine_speed_img {
+	  margin-top: 60px;
+}
+
+div#static_engine_speed_unit {
+    margin-top: 0px;
+    /*padding-left: 10px;*/
+    font-size: 20px;
+    float: left;
+}
+
+div#static_engine_speed_tag {
+	  margin-top: 0px;
+	  /*padding-left: 10px;*/
+	  font-size: 20px;
+    float: left;
+}
+
+/*
+div#app_manager {
+  background-color: blue;
+}
+*/
+
+img#app_manager_img {
+    width: 280px;
+    height: 280px;
+}
+
+div#app_manager_title {
+	  width: 100%;
+	  margin-top: -20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    float: left;
+}
+
+canvas#app_manager_canvas {
+    width: 280px;
+    height: 280px;
+    /*margin-top: 30px;
+    margin-left: 30px;*/
+}
+
+/*
+div#odometer {
+  background-color: green;
+}
+*/
+
+img#odometer_img {
+	  margin-top: 70px;
+}
+
+div#odometer_value {
+    margin-top: -86px;
+    height: 40px;
+}
+
+div#odometer_number {
+    width: 60%;
+    float: left;
+    /*margin-left: 25%;*/
+    text-align: right;
+    font-size: 34px;
+}
+
+div#odometer_unit {
+    width: 35%;
+    float: left;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 18px;
+}
+
+div#vin_title, #vin_value {
+    float: left;
+}
+
+/*app manager*/
+div#app_manager_alert {
+    width: 100%;
+    height: 50px;
+    top: 0px;
+    margin-top: 400px;
+}
+
+div#app_alert_bg {
+    background-color: black;
+    opacity: 0.8;
+    width: 400px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#app_alert_text {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+/*moving.html*/
+div#wheel_angle {
+    width: 30%;
+}
+
+img#wheel_angle_img {
+    margin-top: 70px;
+}
+
+div#wheel_angle_value {
+    margin-top: 0px;
+    font-size: 40px;
+}
+
+/*
+div#engine_speed {
+    width: 40%;
+}
+
+img#engine_speed_img {
+    margin-top: 10px;
+}
+
+div#engine_speed_value {
+    margin-top: -210px;
+    font-size: 64px;
+}
+
+div#average_speed {
+    width: 30%;
+}
+
+img#average_speed_img {
+    margin-top: 90px;
+}
+
+div#average_speed_value {
+    width: 56%;
+    margin-top: -100px;
+    text-align: right;
+    font-size: 40px;
+}
+*/
+
+div#average_speed {
+    width: 40%;
+}
+
+img#average_speed_img {
+    margin-top: 10px;
+}
+
+div#average_speed_value {
+    margin-top: -210px;
+    font-size: 64px;
+}
+
+div#engine_speed {
+    width: 30%;
+}
+
+img#engine_speed_img {
+    margin-top: 80px;
+}
+
+div#engine_speed_value {
+    width: 100%;
+    margin-top: -110px;
+    text-align: center;
+    font-size: 40px;
+}
+
+div#engine_speed_unit {
+    margin-top: -20px;
+    /*padding-left: 10px;*/
+    font-size: 20px;
+}
+
+div#engine_speed_tag {
+    margin-top: -20px;
+    /*padding-left: 10px;*/
+    font-size: 20px;
+}
+
+/*shift level animate*/
+div#shift_changed {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 10;
+    display: block;
+}
+
+div#shift_text {
+    font-size: 24px;
+    color: white;
+}
+
+.shift-show-setup {
+    -webkit-transition: all linear 0s;
+    -moz-transition: all linear 0s;
+    -ms-transition: all linear 0s;
+    -o-transition: all linear 0s;
+    transition: all linear 0s;
+}
+
+.shift-hide-setup {
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -ms-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    transition: all linear 1s;
+}
+
+.shift-show-setup {
+    opacity: 0;
+}
+
+.shift-show-start.shift-show-start {
+    opacity: 1;
+}
+
+.shift-hide-setup {
+    opacity: 1;
+}
+
+.shift-hide-start.shift-hide-start {
+    opacity: 0;
+}
+
+/*setting page*/
+div#config {
+    width: 500px;
+    height: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+div#configtop {
+    width: 100%;
+    height: 55px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#configtop div {
+    height: 45px;
+}
+
+div#backdiv {
+    width: 70px;
+    float: left;
+    text-align: center;
+}
+
+button#backbtn {
+    background-image: url(../img/setting/back.png);
+    width: 50px;
+    height: 45px;
+}
+
+div#configtitle {
+    width: 200px;
+    /*针对实体车载系统做的特殊样式，margin-top*/
+    margin-top: 0px;
+    float: left;
+    font-size: 40px;
+    color: white;
+    text-align: left;
+}
+
+div#allontitle {
+    width: 195px;
+    margin-top: 7px;
+    float: left;
+    font-size: 24px;
+    color: white;
+    text-align: right;
+}
+
+button#allonbtn {
+    margin-left: 5px;
+    margin-top: 7px;
+}
+
+div#configitems {
+    width: 100%;
+    padding-left: 70px;
+}
+
+.configitem {
+	  width: 430px;
+    height: 45px;
+}
+
+.configitemtop {
+	  width: 100%;
+    height: 44px;
+}
+
+.configicon {
+	  width: 36px;
+	  height: 36px;
+	  margin-top: 5px;
+	  float: left;
+}
+
+.configlabel {
+    width: 355px;
+    height: 100%;
+    margin-left: 5px;
+    padding-top: 5px;
+    float: left;
+    font-size: 22px;
+    color: white;
+}
+
+.active {
+	  color: red;
+}
+
+.inactive {
+	  color: white;
+}
+
+.configcheckbox {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    float: left;
+}
+
+.select_all {
+    background-image: url(../img/setting/select_all.png);
+}
+
+.selected {
+    background-image: url(../img/setting/selected.png);
+}
+
+.unselected {
+    background-image: url(../img/setting/unselected.png);
+}
+
+.configline {
+    width: 100%;
+    height: 1px;
+    float: left;
+}
+
+div#speedlimits {
+	  width: 100%;
+	  height: 45px;
+	  padding-left: 70px;
+}
+
+.speedlimitpart {
+	  width: 140px;
+	  height: 100%;
+	  float: left;
+    position: relative;
+}
+
+.limitimg {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    float: left;
+}
+
+.limittext {
+	  color: white;
+	  font-size: 22px;
+	  text-align: left;
+	  float: left;
+    margin-top: 15px;
+}
+
+div#configlogo {
+    width: 300px;
+    height: 300px;
+    float: left;
+}

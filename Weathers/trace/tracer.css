@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+#btnShowTracer{
+	diplay:none;
+}
+
+#btnShowTracer1 {
+	position:absolute;
+	top:445px;
+	right:280px;
+	height:55px;
+	width:90px;
+	cursor:pointer;
+	z-index:1000;
+	opacity: 0.7;
+	font-size: 24px;
+	color: white;	
+}
+
+#tracer {
+	margin-top:100px;
+	padding-left: 20px;
+	width:803px;
+	height:383px;
+	background-color:white;
+	z-index:999;
+}
+
+#tracer div{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#tracelogContainer {
+	height:290px;
+}
+
+
+#tracer button{
+	height: 30x;
+	width: 100px;
+}
+
+#btnTracer {
+	color: white;
+	font-size: 24px;
+	margin-top: 15px;
+}
+
+#traceLog {
+}
+
+#traceLog li{
+	margin-top: 16px;
+	margin-bottom: 16px;
+}

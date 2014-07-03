@@ -1,0 +1,38 @@
+<div id="top">
+    <div id="datedomain" class="toppart">
+        <img id="dayimg" ng-src="img/{{dayimg}}" src="img/daytime.png" align="bottom"
+        ng-click="logDisplay();">
+        <div id="date">{{datestr}}</div>
+        <img id="alerticon" ng-show="alertShow"
+        ng-src="{{alertImgSrc}}">
+    </div>
+
+    <div id="warncfgdomain" class="toppart"></div>
+
+    <div id="exitdomain" class="toppart">
+        <button id="exit_app_btn" class="customerbtn"
+            ng-click="closeApp()"
+            onmousedown="this.style.backgroundImage='url(img/exit_an.png)';"
+            onmouseup="this.style.backgroundImage='url(img/exit.png)';">
+    </div>
+</div>
+
+<div id="moving_middle">
+    <div id="wheel_angle" class="middlepart">
+        <img id="wheel_angle_img" ng-src="img/moving/wheel_angle{{wheel_direction}}.png" src="img/moving/wheel_angle1.png">
+        <div id="wheel_angle_value" class="module_value">{{dir_text}}</div>
+    </div>
+
+    <div id="average_speed" class="middlepart">
+        <img id="average_speed_img" ng-src="img/moving/speed_{{average_speed_id}}.png" src="img/moving/speed_0.png">
+        <div id="average_speed_value" class="module_value">{{average_speed_value}}</div>
+    </div>
+    
+    <div id="engine_speed" class="middlepart">
+        <img id="engine_speed_img" ng-src="img/static/Park_engine_speed_{{engine_speed_id}}.png"
+        src="img/static/Park_engine_speed.png">
+        <div id="engine_speed_value" class="module_value">{{engine_speed_value}}</div>
+        <div id="engine_speed_unit" class="module_value">{{engine_speed_unit}}</div>
+        <div id="engine_speed_tag" class="module_value">{{engine_speed_tag}}</div>
+    </div>
+</div>

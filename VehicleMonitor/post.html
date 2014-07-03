@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>
+        window.onmessage = function (e) {
+            console.log("call post.html onmessage()");
+            document.getElementById("postdata").value = e.data;
+            document.forms[0].submit();
+        };
+    </script>
+</head>
+<body>
+    <form method="post" action="" enctype="application/x-www-form-urlencoded">
+        <p>
+            <input type="text" name="message" value="" id="postdata" />
+            <input type="submit" />
+        </p>
+    </form>
+</body>
+</html>

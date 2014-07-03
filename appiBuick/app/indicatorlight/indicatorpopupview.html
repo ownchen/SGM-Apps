@@ -1,0 +1,28 @@
+<div class="subpage">
+	<div class="navheader">
+		<img src="assests/images/navbar/back.png" border=0 class="home" ng-click="$modalSuccess()" sgm-button the-left="40" />
+		<div class="pagetitle">指示灯查询</div>
+		<img src="assests/images/home/close_btn.png" border=0 class="closebutton" ng-click="closeapp()" />
+	</div>
+	
+	<div class="bodyarea">
+		<div class="indicatorcontent" ng-hide="speedStatus">
+			<div class="indicatoricon">
+				<img class="indicatoriconimg" ng-src="assests/images/indicatorlight/{{imgurl}}">
+			</div>
+			<div class="indicatoraction" ng-click="readit()"><img id="tts" ng-src= "{{btnimg}}" border=0></div>
+			<div class="indicatortitle">{{title}}</div>
+			<div class="indicatormsg">{{message}}</div>
+		</div>
+
+   		<div class="indicatorcontent2" ng-show="speedStatus">
+   			<div class="indicatoricon2">
+   				<img class="indicatoriconimg" ng-src="assests/images/indicatorlight/{{imgurl}}">
+   			</div>
+   			<div class="indicatoraction2" ng-click="readit()"><img ng-src= "{{btnimg}}" border=0></div>
+   			<div class="indicatormsg2">为了您的安全，</br>驾驶中部分功能暂停使用。</div>
+   		</div>
+   
+
+   </div>
+</div>

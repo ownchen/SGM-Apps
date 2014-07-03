@@ -1,0 +1,123 @@
+@CHARSET "UTF-8";
+
+#progressBoxMessage {
+	height:60px;
+	line-height:60px;
+	font-size:25px;
+	color:#FFFFFF;
+	text-align:center;
+	padding-top:106px;
+	overflow:hidden;
+	max-width: 700px;
+}
+
+.loadingimage{
+	-webkit-animation: spin 1s infinite linear;
+	margin-top: 15px;
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(-360deg); }
+}
+
+.bottomBox {
+	height:55px;
+	width:100%;
+	background:url(../images/6.png) right no-repeat,
+	           url(../images/7.png) repeat-x;
+}
+
+.bottomBox li{
+	float:left;
+}
+
+.bottomBox li.refrash {
+	margin-right: 1px;
+	background:url(../images/3.png);
+	width:97px;
+	height:55px;
+}
+
+.bottomBox li.city {
+    margin: 0 1px;
+    background:url(../images/5.png);
+	width:97px;
+	height:55px;
+}
+
+.bottomBox li.play {
+	margin-right:1px;
+    position: relative;
+}
+
+.bottomBox li.back {
+    margin: 0 1px;
+	background:url(../images/30.png) no-repeat;
+	width:97px;
+	height:55px;
+	font-size:22px;
+	text-indent:1.3em;
+	line-height:43px;
+}
+
+.bottomBox li.edit {
+	/*margin:5px 0 0 30px;  */
+	background:url(../images/31_0.png) no-repeat;
+	width:97px;
+	height:55px;
+	font-size:22px;
+	text-align:center;
+	line-height:43px;
+}
+
+.bottomBox li.title{
+	float: right;
+	width: 150px;
+	height: 55px;
+	text-align: left;
+	line-height: 43px;
+	color: #00A0E3;
+	margin-right: 340px;
+	margin-top: 5px;
+	font-family: 微软雅黑;
+	font-size: 28px;
+}
+
+a:link.down{
+	color:red;
+}
+
+.today {
+	height:198px;
+	width:100%;
+	margin-top: 10px;
+}
+.today li {
+	float:left;
+}
+.today li.arrowLeft,.today li.arrowRight {
+	width:44px;
+	text-align:center;
+	padding:40px 0 0 0;
+}
+.today li.weather {
+	width:710px;
+	height:100%;
+	color:#FFF;
+}
+
+#currentWeather_left {
+	float:left;
+	height:180px;
+	width:350px;
+	font-size:30px;
+	padding:15px 15px 0 15px;
+	overflow:hidden;
+}
+#currentWeather_right {
+	float:left;
+	height:180px;
+	width:280px;
+	padding:5px 0 0 0px;
+}

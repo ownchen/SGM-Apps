@@ -1,0 +1,39 @@
+<div class="subpage">
+	<div class="navheader">
+		<img src="assests/images/navbar/back.png" border=0 class="home" ng-click="back()"  sgm-button the-left="40" />
+		<!--  <img src="assests/images/navbar/back.png" border=0 class="home" ng-click="back()" />  -->
+		<div class="pagetitle2">{{pagetitle}}</div>
+		<img src="assests/images/navbar/search.png" border=0 class="search" sgm-button-icon img-up="search.png" img-down="search2.png" btnclicked="search()" />
+		<img src="assests/images/navbar/star.png" border=0 class="favorlist" sgm-button-icon img-up="star.png" img-down="star2.png" btnclicked="favorlist()" />
+		<img src="assests/images/navbar/filter.png" border=0 class="popfilter" sgm-button-icon img-up="filter.png" img-down="filter2.png" btnclicked="popFilter()" />
+		<img src="assests/images/navbar/map.png" border=0 class="markermap" sgm-button-icon img-up="map.png" img-down="map2.png" btnclicked="markermap()" />
+	</div>
+	<div class="bodyarea"  spin="spinconfig" spin-if="spinif">
+		<div sgm-scroller initpos="initpos" maxno="maxno" currentrow="rowindex(index)" busying="spinif" class="scrollerbar" >
+		</div>
+		<!--  <div class="itemblock"  >  --> 
+			<div class="itemtitle">
+				<div class="gasprice93" ng-hide="loading">{{currentStation.n1}}<span class="price">{{currentStation.p1}}</span></div>
+				<img class="gaspricep" src="assests/images/sepline.png"  ng-hide="loading" />
+				<div class="gasprice97" ng-hide="loading">{{currentStation.n2}}<span class="price">{{currentStation.p2}}</span></div>
+				<img class="gaspricep2" src="assests/images/sepline.png"  ng-hide="loading" />
+				<div class="gasno" ng-hide="loading">{{index+1}}/{{totalno}}</div>
+				<div class="gasdis" ng-hide="loading">{{currentStation.dist}}米</div>
+			</div>
+			<div ng-show="loading" class="itembodyblank errormsg">{{errormsg}}</div>
+			 
+			<div ng-hide="loading" class="itembody" >
+				<div class="gasinfo">
+					<div class="gasname">{{currentStation.name}}
+					<span class="brand" ng-hide="iftype">{{currentStation.stationtype}}</span>
+					</div>
+					<div class="gasbody">{{currentStation.address}}</div>
+				</div>
+				<div class="gasbutton">
+					<img id="favbutton" ng-src="assests/images/{{imgSrc}}" class="gasfav" ng-click="doFavor()" sgm-button the-left="70"/>
+					<img id="favbutton" src="assests/images/findpath.png" class="gaspath" ng-click="checkpath()" sgm-button the-left="70"/>
+				</div>
+			</div>
+		<!--  </div>  -->
+	</div>
+</div>

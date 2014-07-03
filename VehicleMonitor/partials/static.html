@@ -1,0 +1,66 @@
+<div id="top">
+    <div id="datedomain" class="toppart">
+        <img id="dayimg" ng-src="img/{{dayimg}}" src="img/daytime.png" align="bottom"
+        ng-click="logDisplay();">
+        <div id="date">
+        <!-- 时间暂时无法获取
+        {{datestr}}        
+        --></div>
+        <img id="alerticon" ng-show="alertShow"
+        ng-click="loadSetting()"
+        ng-src="{{alertImgSrc}}">
+    </div>
+
+    <div id="warncfgdomain" class="toppart">
+        <button id="warn_config_btn" class="customerbtn"
+            ng-click="loadSetting()"
+            onmousedown="this.style.backgroundImage='url(img/static/warn_config_an.png)';"
+            onmouseup="this.style.backgroundImage='url(img/static/warn_config.png)';">
+    </div>
+
+    <div id="exitdomain" class="toppart">
+        <button id="exit_app_btn" class="customerbtn"
+            ng-click="closeApp()"
+            onmousedown="this.style.backgroundImage='url(img/exit_an.png)';"
+            onmouseup="this.style.backgroundImage='url(img/exit.png)';">
+    </div>
+</div>
+
+<div id="static_middle">
+    <div id="static_engine_speed" class="middlepart">
+        <img id="static_engine_speed_img"
+            ng-src="{{ engine_speed_url }}"
+            src="img/static/Park_engine_speed.png">
+        <div id="static_engine_speed_value" class="module_value">{{engine_speed_value}}</div>
+        <div id="static_engine_speed_unit" class="module_value">{{engine_speed_unit}}</div>
+        <div id="static_engine_speed_tag" class="module_value">{{engine_speed_tag}}</div>
+    </div>
+
+    <div id="app_manager" class="middlepart">
+        <!--img id="app_manager_img" src="img/static/yh.png"
+            ng-src="img/static/yh{{killImgID}}.png"
+            ng-click="appmanager()"-->
+        <!--div id="app_manager_loader" ng-click="appmanager()"></div-->
+        <canvas id="app_manager_canvas" width="280" height="280" ng-click="appmanager()"></canvas>
+        <div id="app_manager_title">{{app_manager_title}}</div>
+    </div>
+
+    <div id="odometer" class="middlepart">
+        <img id="odometer_img" src="img/static/odometer.png">
+        <div id="odometer_value" class="module_value">
+            <div id="odometer_number">{{odometer_number}}</div>
+            <div id="odometer_unit">km</div>
+        </div>
+    </div>
+</div>
+
+<div id="bottom">
+    <div id="vin_title">车辆代码：</div>
+    <div id="vin_value">{{vin_value}}</div>
+</div>
+
+<div id="app_manager_alert" class="popup" ng-show="app_alert_show">
+    <div id="app_alert_bg" class="div_center_bg">
+        <div id="app_alert_text" class="div_center">{{killContents}}</div>
+    </div>
+</div>

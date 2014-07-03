@@ -1,0 +1,245 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+#customkeyboard
+{
+	display:block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+/**
+ * The style of disabling arrow
+ **/
+#inputcontainer
+{
+    height:52px;
+    float:left;
+    width:633px;
+    overflow:hidden;
+    background-color:transparent;
+    text-align:left;
+    position:absolute;
+    z-index:1000;
+    left: 88px;
+    top:158px;
+}
+#tempwordsshow
+{
+    height:16px;
+    float:left;
+    color:#fff;
+    font: normal 25px/15px zhonghei,Verdana, Sans-Serif;
+    padding:10px 0 0 5px;
+    cursor: pointer;
+    min-width:55px;
+    text-align: center;
+}
+#ChiList
+{
+    float: left;
+    font-size: 14px;
+    position:relative;
+}
+div#ChiList .singleText
+{
+    color: white;
+    height: 35px;
+    float: left;
+    margin-top: 5px;
+    padding: 0px 10px;
+    margin-left:15px;
+    padding-right:12px;
+    line-height: 32px;
+    text-align: center;
+    display: inline-block;
+    border-right: 1px dashed;
+    cursor: pointer;
+    font: normal 25px/30px zhonghei,Verdana, Sans-Serif;
+}
+
+div#ChiList .singleText:active{
+	background-color:#fff;
+}
+div#tempwordsshow: active{
+	background-color:#fff;
+}
+/*The background image of "Enter" button*/
+
+
+#k_enter .buttonmiddle
+{
+    width: 34px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 17px;
+    color:#00cd0a;
+}
+
+
+#nextarrow
+{
+    float:left;
+    margin-right:0px;
+}
+#keycontainer
+{
+    height:265px;
+    clear:both;
+    color:#fff;
+}
+/**
+ * View Style
+ **/
+ .view{
+	width:800px;
+	height:341px;
+	background-color:black;
+}
+.pyFirstview {
+	background:url('../images/py_1.png') no-repeat scroll -3px;
+}
+.pySecondview {
+	background:url('../images/py_2.png') no-repeat scroll -3px;
+}
+.enFirstview {
+	background:url('../images/en_1.png') no-repeat scroll -3px;
+}
+.enSecondview {
+	background:url('../images/en_2.png') no-repeat scroll -3px;
+}
+.symbolview {
+	background:url('../images/sym.png') no-repeat scroll -3px;
+}
+/**
+ * Key board
+ **/
+#keyboard
+{
+    list-style: none;
+    padding:5px;
+    padding-left:3px;
+    padding-top:0px;
+}
+#btncontainer
+{
+    margin:0 auto;
+}
+#popupcontainer
+{
+    width:802px;
+    height:387px;
+    overflow:hidden;
+    margin:0 auto;
+    padding-top:95px;
+    left:0px;
+    display:none;
+    background-color:#000;
+}
+/*
+ * UI style
+ **/
+#cursorposition span
+{
+    margin-right: 15px;
+	cursor: pointer;
+	display: inline-block;
+	color: white;
+	height: 46px;
+	width: 60px;
+	text-align: center;
+	background-color: #555;
+	font-size: 35px;
+	
+}
+#previouspostion {
+	background:url('../images/arrowLeft.png') ;
+}
+#nextpostion {
+	background:url('../images/arrowRight.png') ;
+}
+#previouspostion:active {
+	background:url('../images/arrowLeft1.png') ;
+}
+#nextpostion:active {
+	background:url('../images/arrowRight1.png') ;
+}
+#cursorposition
+{
+    float:left;
+    height:40px;
+}
+.delete
+{
+    float: left;
+	margin-left: 2px;
+	cursor: pointer;
+	display: inline-block;
+	height: 32px;
+	width: 57px;
+	background: url('../images/delBtn.png');
+	border: 0px;
+	margin-top: 6px;
+}
+
+.delete_enable
+{
+	background: url('../images/delBtn_enable.png');
+}
+.delete:active{
+	background:url('../images/delBtn1.png')
+}
+
+.enter {
+	cursor: pointer;
+	height: 46px;
+	width: 60px;
+	background:url('../images/enterBtn.png');
+	float:left;
+	margin-right:15px;
+}
+.enter:active{
+	background:url('../images/enterBtn1.png');
+}
+
+.enter_enable{
+	background:url('../images/enterBtn_enable.png');
+}
+
+#T1,#T2
+{
+    width: 385px;
+    height:40px;
+    float:left;
+    font: normal 25px/25px zhonghei,Verdana, Sans-Serif;
+    margin-left: 10px;
+    border: 0px solid;
+}
+#inputtextbox
+{
+    float:left;
+    width:460px;
+    boder:1px;
+    background-color:#fff;
+    padding-bottom: 2px;
+	margin-left: 0px;
+	padding-top:2px;
+}
+#keyboard button{
+	position: absolute;
+	cursor: pointer;
+	text-align: center;
+	background-color: #ccc;
+	font-size: 24px;
+	border-radius: 10px;
+	box-shadow: 0 1px 1px #ccc;
+	color:#fff;
+	border:0px;
+}

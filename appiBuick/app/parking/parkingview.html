@@ -1,0 +1,43 @@
+<div class="subpage">
+	<div class="navheader">
+		<img src="assests/images/navbar/back.png" border=0 class="home" ng-click="back()" sgm-button the-left="40" />
+		<div class="pagetitle2">{{pagetitle}}</div>
+		<img src="assests/images/navbar/search.png" border=0 class="search" sgm-button-icon img-up="search.png" img-down="search2.png" btnclicked="search()" />
+		<img src="assests/images/navbar/star.png" border=0 class="favorlist" sgm-button-icon img-up="star.png" img-down="star2.png" btnclicked="favorlist()" />
+		<img src="assests/images/navbar/filter.png" border=0 class="popfilter" sgm-button-icon img-up="filter.png" img-down="filter2.png" btnclicked="popFilter()" />
+		<img src="assests/images/navbar/map.png" border=0 class="markermap"  sgm-button-icon img-up="map.png" img-down="map2.png" btnclicked="markermap()" />
+	</div>
+	<div class="bodyarea"  spin="spinconfig" spin-if="spinif">
+		<div sgm-scroller initpos="initpos" maxno="maxno" currentrow="rowindex(index)" busying="spinif" class="scrollerbar" >
+		</div>
+		<!-- <div class="itemblock">  -->
+			<div class="itemtitle">
+				<div class="parkingcharge" ng-hide="loading">{{currentParking.charge}}</div>
+				<!-- <div style="position:absolute;top:12px; left:186px;width:160px;font-size:24px;color:#FFF"></div>  -->
+				<img class="parkingpn" src="assests/images/sepline.png"  ng-hide="loading" />
+				<div class="parkingno" ng-hide="loading">{{index+1}}/{{totalno}}</div>
+				<div class="parkingdis" ng-hide="loading">{{currentParking.distance}}</div>
+			</div>
+			<div ng-show="loading" class="itembodyblank errormsg">{{errormsg}}</div>
+			<div ng-hide="loading" class="itembody">
+				<div class="parkinginfo">
+					<div class="parkingname">{{currentParking.name}}
+					<span class="categroy" ng-hide="iftype">{{currentParking.category}}</span>
+					</div>
+					<div class="parkingbody">{{currentParking.address}}</div>
+					<div class="parkingprice">
+					  <div ng-show="priceallday">全天收费<span style="color:red">{{currentParking.priceallday}}元</span></div>
+					  <div ng-show="pricedayfirsthour">分段计费首时<span style="color:red">{{currentParking.pricedayfirsthour}}元/小时</span></div>
+					  <div ng-show="pricedayhour">白天计费<span style="color:red">{{currentParking.pricedayhour}}元/小时</span></div>
+					  <div ng-show="pricenighthour">夜间计费<span style="color:red">{{currentParking.pricenighthour}}元/小时</span></div>
+					  <div ng-show="priceinfo">没有收费信息</div>
+					</div>
+				</div>
+				<div class="parkingbutton">
+					<img ng-click="doFavor()" id="favbutton" ng-src="assests/images/{{imgSrc}}" class="gasfav" sgm-button the-left="70"/>
+					<img  ng-click="checkpath()" id="favbutton" src="assests/images/findpath.png" class="gaspath" sgm-button the-left="70"/>
+				</div>
+			<!--  </div>  -->
+		</div>
+	</div>
+</div>

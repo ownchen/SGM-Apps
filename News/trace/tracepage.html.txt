@@ -1,0 +1,14 @@
+	<div id="tracer" style="display:none">
+		<div>
+			<button id="hideTracer">Back</button>
+			<button id="clearTraceLog">Clear</button>
+			<button id="uploadTraceLog">Upload</button>
+		</div>
+		<div id="traceButtons">
+		</div>
+		<div jsp id="tracelogContainer" class="scroll-pane">
+			<ul id="traceLog">
+				<li>log</li>
+			</ul>
+		</div>
+	</div>

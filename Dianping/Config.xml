@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gmWebApp>
+	<AppID>41023831</AppID>
+	<AppType>RemoteHigh</AppType>
+	<FriendlyName>大众点评</FriendlyName>
+	<VehicleStatus>Drive</VehicleStatus>
+	<AutoStart>false</AutoStart>
+	<AppCategory>General</AppCategory>
+	<RemotePath></RemotePath>
+	<IconDisplay>Normal</IconDisplay>
+	<Render>Normal</Render>
+	<IconURL>146Icon.png</IconURL>
+	<MainURL>index.html</MainURL>
+	<AppVersion>0.2.0</AppVersion>
+</gmWebApp>

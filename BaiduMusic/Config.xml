@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gmWebApp>
+	<AppID>87465938</AppID>
+	<AppType>RemoteHigh</AppType>
+	<FriendlyName>百度音乐</FriendlyName>
+	<VehicleStatus>Drive</VehicleStatus>
+	<AutoStart>false</AutoStart>
+	<AppCategory>Audio</AppCategory>
+	<RemotePath></RemotePath>
+	<IconDisplay>Normal</IconDisplay>
+	<Render>Normal</Render> 
+	<IconURL>146Icon.png</IconURL>
+	<MainURL>index.html</MainURL>
+	<AppVersion>0.1.0</AppVersion>
+</gmWebApp>

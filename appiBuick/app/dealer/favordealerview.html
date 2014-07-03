@@ -1,0 +1,15 @@
+<div class="subpage">
+	<div class="navheader">
+		<img src="assests/images/navbar/back.png" border=0 style="position:absolute;left:10px;top:5px"  ng-click="back()"  sgm-button the-left="40" />
+		<div class="pagetitle">设置常用经销商</div>
+		<img src="assests/images/home/close_btn.png" border=0 class="closebutton" ng-click="closeapp()" />
+	</div>
+	<div class="bodyarea" spin="spinconfig" spin-if="spinif">
+		<div sgm-scroller initpos="initpos" maxno="listlength" currentrow="rowindex(index)" busying="spinif"  class="scrollerbar"  >
+		</div>
+		<div ng-show = "loading" class="listbodyblank errormsg2">{{errormsg}}</div>
+		<div ng-hide = "loading" class="listbody">
+			<div sgm-lister listitems="dealers" rowclicked="clickedrow(index)" pos="listPos" class="listbar"></div>
+		</div>
+	</div>
+</div>

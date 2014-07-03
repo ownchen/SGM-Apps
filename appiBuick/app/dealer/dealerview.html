@@ -1,0 +1,32 @@
+<div class="subpage">
+	<div class="navheader">
+		<img src="assests/images/navbar/back.png" border=0 class="home" ng-click="back()"  sgm-button the-left="40" />
+		<div class="pagetitle">查经销商</div>
+		<img src="assests/images/navbar/map.png" border=0 class="markermap" sgm-button-icon img-up="map.png" img-down="map2.png" btnclicked="markersmap()" />
+	</div>
+	<div class="bodyarea" spin="spinconfig" spin-if="spinif">
+		<div sgm-scroller initpos="initpos" maxno="listlength" currentrow="rowindex(index)" busying="spinif" class="scrollerbar" >
+		</div>
+		<!-- <div class="itemblock"> -->
+			<div class="itemtitle">
+				<div class="dealeritemname"><span class="price">{{title}}</span></div>
+				<img class="dealerpg" src="assests/images/sepline.png"  ng-hide="loading||ifshow" />
+				<div class="dealerno" ng-hide="loading||ifshow">{{index}}/{{listlength-1}}</div>
+				<div class="dealeritemcity">{{citydisplayname}}</div>
+			</div>
+			<div ng-show="loading" class="itembodyblank errormsg">{{errormsg}}</div>
+			<div ng-hide="loading" class="itembody">
+				<div class="dealerinfo">
+					<div class="dealername">{{currentdealer.title}}</div>
+					<div class="dealerdistance">{{currentdealer.distance}}<span>米</span></div>
+					<div class="dealeraddr">地 址 : {{currentdealer.address}}</div>					
+					<div class="dealertel"><span ng-click="dial(currentdealer.telephone)"><img align="absmiddle" src="assests/images/popup_phone.png" border=0px/>&#12288;{{currentdealer.telephone}}</span> </div>			
+				</div>
+				<div class="dealerbutton">
+					<span ng-click=showlocaldealer()><img id="favbutton" ng-src="{{btnimgurl}}" class="dealerfav" sgm-button the-left="70" /></span>
+					<span ng-click=checkpath()> <img id="favbutton" src="assests/images/findpath.png" class="dealerpath" sgm-button the-left="70" /></span>
+				</div>
+			</div>
+		<!-- </div>  -->
+	</div>
+</div>

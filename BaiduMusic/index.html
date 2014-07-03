@@ -1,0 +1,258 @@
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Baidu Music App</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style>
+		progress {
+			width: 160px;
+			height: 20px;
+			border: 1px solid #0064B4;  
+			background-color:#545454;
+			color: #0d5784; /*IE10*/
+			border-radius: 3px;
+		}
+		
+		progress::-moz-progress-bar { background: #545454;border-radius: 3px; }
+		progress::-webkit-progress-bar { background: #545454;border-radius: 3px; }
+		progress::-webkit-progress-value  { background: #0064B4; border-radius: 3px;}
+		.hidden{
+			display:none;
+		}
+		#View{
+			width:802px;
+			height:392px;
+			position:absolute;
+			top:0px;
+			left:0px;
+		}
+		.startMsg{
+			color: #fff;
+			position: relative;
+			width: 200px;
+			margin: auto;
+			text-align: center;
+		}
+		.startLoadingBar{
+			width: 200px;
+			left: 50%;
+			position: relative;
+			margin-top: 320px;
+			height: 10px;
+			margin-left: -100px;
+			overflow: hidden;
+		}
+		
+		.loadingBar{
+			text-align: center;
+			position: relative;
+			width: 100px;
+			margin: auto;
+			height:3px;
+			background-color: #fff;
+		
+			-webkit-animation-name:startLoadEffect;
+			-webkit-animation-duration:1.8s;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-direction:/*alternate;*/linear;
+		}
+		.loading{
+			background:url("static/images/loading.png") no-repeat;
+			width:36px;
+			height:33px;
+			position:absolute;
+			left:50%;
+			top:50%;
+			margin-left:-18px;
+			margin-top:-16px;
+		}
+		
+		@-webkit-keyframes startLoadEffect{
+		0%{margin-left:-100px;}		
+		100%{margin-left:200px;	}}
+		
+		.startPageLogo
+		{
+			position: relative;
+			width:464px;
+			margin:0 auto;
+			height:230px;
+			background:url('static/images/startPageLogo.png');
+			top: 90px;
+		}
+			
+		</style>
+    </head>
+    <body onselectstart="return false" style="margin:0px;overflow: hidden;font-family: 'shishangjiantizi', '黑体';position: relative;width: 802px;height: 482px;background: url('static/images/mainContainerBg.png') no-repeat;background-position: bottom center;background-size: 100% 392px;">
+    <div id="View">
+    	<!-- 关闭按钮  -->
+	    <div class="closeBtn"></div>
+	    
+	    <!-- 开始页面   -->
+	    <div class="startPage" style="position: absolute;z-index: 1000;width: 802px;background: url('static/images/startPageLogo.png') no-repeat;background-position:center;top: 90px;height: 392px;">
+		    <div class="startLoadingBar">
+		    	<div class="loadingBar"></div>
+		    </div>
+	    	<div class="startMsg">数据加载中...</div>
+	    </div>
+	    
+	    <!-- 启动页面 --> 
+	    <div id="alertBox" class="alertBox hidden">
+	    	<div class="alertMessage">加载错误，<br>请稍后后重试。</div>
+	    	<div class="choseContent">
+	    		<div class="alertBtn okBtn" id="okBtn">确认</div>
+	    	</div>
+	    </div>
+	    <div id="addCloudSong"></div>
+	    <div id="addMoreCloudSongLoadInfo"></div>
+	    <div id="logoutBox" class="alertBox hidden">
+	    	<div class="alertMessage">确认退出？</div>
+	    	<div class="choseContent">
+	    		<div class="alertBtn okBtn" >确定</div>
+	    		<div class="alertBtn cancelBtn" >取消</div>
+	    	</div>
+	    </div>
+	    <!-- 注册界面 --> 
+	    <div id="registerBox" class="alertBox hidden">
+	    	<div class="alertMessage">请至www.baidu.com注册百度账号</div>
+	    	<div class="choseContent">
+	    		<div class="alertBtn okBtn" id="registerOKBtn">确定</div>
+	    	</div>
+	    </div>
+	    <!-- 主内容   -->
+	    <div class="Container hidden" id="mainContainer" style="opacity:0;display:block;">
+		   <div id="debugView" class="small hidden">
+		    	<div class="debugContent" id="debugContent">
+		    	</div>
+		    	<div class="button" id="showDebug">LogShow</div><div class="button hidden" id="hideDebug">Hide</div>
+		    	<div class="button" id="debugNext">Next</div>
+		    	<div class="button" id="debugPrev">Prev</div>
+		    	<div class="button" id="debugClear">Clear</div>
+		    </div>
+	    	<!-- Content View ---->
+	    	<div class="Center hidden">
+
+		    </div>
+	    </div>
+	    </div>
+	    
+	    <div id="customkeyboard" style="z-index: 1000;">
+	    </div>
+	    
+	    <!-- 图片预加载 -->
+	    <div style="display:none">
+	    	<img src="static/images/artist_title.png">
+	    	<img src="static/images/artistSongItem_down.png">
+	    	<img src="static/images/back_down.png">
+	    	<img src="static/images/botArrowDown.png">
+	    	<img src="static/images/clipLeftArrow_down.png">
+	    	<img src="static/images/clipRightArrow_down.png">
+	    	<img src="static/images/cloud_down.png">
+	    	<img src="static/images/cloud_nodown.png">
+	    	<img src="static/images/cloudSongBtn_down.png">
+	    	<img src="static/images/lastDownBtn.png">
+	    	<img src="static/images/loginBefBtnDown.png">
+	    	<img src="static/images/logoutBtn_down.png">
+	    	<img src="static/images/newSongBtn_down.png">
+	    	<img src="static/images/nextDownBtn.png">
+	    	<img src="static/images/onLineMusicBtn_down.png">
+	    	<img src="static/images/playAllBtn_down.png">
+	    	<img src="static/images/playGuidBtn_down.png">
+	    	<img src="static/images/radioBtn_down.png">
+	    	<img src="static/images/radioNextBtn_down.png">
+	    	<img src="static/images/radioPlayBtn_down.png">
+	    	<img src="static/images/radioStopBtn_down.png">
+	    	<img src="static/images/search2.png">
+	    	<img src="static/images/secondClassD_down.png">
+	    	<img src="static/images/secondClassDownArrow.png">
+	    	<img src="static/images/secondClassM_down.png">
+	    	<img src="static/images/secondClassU_down.png">
+	    	<img src="static/images/songList_down.png">
+	    	<img src="static/images/songListDownArrow.png">
+	    	<img src="static/images/songListDownArrow_disable.png">
+	    	<img src="static/images/topArrowDown.png">
+	    	<img src="static/images/topBar_current.png">
+	    </div>
+	</body>
+		<!-- <link rel="stylesheet" href="GMLIB/com.gm.widgets.css" type="text/css"/> -->
+		<link rel="stylesheet" href="static/css/basic.css" type="text/css" />
+		<link rel="stylesheet" href="static/css/preload.css" type="text/css" />
+		<link rel="stylesheet" href="static/css/jquery.jscrollpane.css" type="text/css" />
+		
+		<!-- custom keyboard styles and js -->
+		<link rel="stylesheet" href="keyboard/css/style.css" type="text/css"/>
+		
+		<script type="text/javascript" src="GMLIB/com.gm.widgets.js"></script>
+		<script type="text/javascript" src="GMLIB/comm.js"></script>
+		<script type="text/javascript" src="GMLIB/info.js"></script>
+		<script type="text/javascript" src="GMLIB/io.js"></script>
+		<script type="text/javascript" src="GMLIB/media.js"></script>
+		<script type="text/javascript" src="GMLIB/nav.js"></script>
+		<script type="text/javascript" src="GMLIB/phone.js"></script>
+		<script type="text/javascript" src="GMLIB/system.js"></script>
+		<script type="text/javascript" src="GMLIB/ui.js"></script>
+		<script type="text/javascript" src="GMLIB/voice.js"></script>
+
+   		<!-- Tools file -->
+		<script type="text/javascript" src="static/js/tools/xui-2.3.2.js"></script>
+		<script type="text/javascript" src="static/js/tools/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="static/js/tools/jquery.tools.min.js"></script>
+		<script type="text/javascript" src="static/js/tools/jquery.jscrollpane.min.js"></script>
+		<!-- Htmls Content -->
+		<script type="text/javascript" src="static/js/htmlcontent.js"></script>
+		
+		<script type="text/javascript" src="static/js/resend_ajax.js"></script>
+		<script type="text/javascript" src="static/js/oauth_helper.js"></script>
+		<script type="text/javascript" src="static/js/api_config.js"></script>
+		<script type="text/javascript" src="static/js/data_transfer.js"></script>
+		<script type="text/javascript" src="static/js/Json2.js"></script>
+		<script type="text/javascript" src="static/js/local_storage.js"></script>
+		<script type="text/javascript" src="static/js/view_controler.js"></script>
+		<script type="text/javascript" src="static/js/playList.js"></script>
+		<script type="text/javascript" src="static/js/main.js"></script>
+		<script type="text/javascript" src="static/js/coding.js"></script>
+		<script type="text/javascript" src="static/js/media.js"></script> 
+
+		<!-- View js -->
+		<script type="text/javascript" src="static/js/view/view.js"></script>
+		<script type="text/javascript" src="static/js/view/artist.js"></script>
+		<script type="text/javascript" src="static/js/view/artistAlbumSongs.js"></script>
+		<script type="text/javascript" src="static/js/view/artistInfo.js"></script>
+		<script type="text/javascript" src="static/js/view/billBoardList.js"></script>
+		<script type="text/javascript" src="static/js/view/featuredAlbums.js"></script>
+		<script type="text/javascript" src="static/js/view/featuredAlbumsDetail.js"></script>
+		<script type="text/javascript" src="static/js/view/musicOnlineIndex.js"></script>
+		<script type="text/javascript" src="static/js/view/newAlbumShelves.js"></script>
+		<script type="text/javascript" src="static/js/view/newAlbumShelvesDetail.js"></script>
+		<script type="text/javascript" src="static/js/view/plazaNewArrival.js"></script>
+		<script type="text/javascript" src="static/js/view/radio.js"></script>
+		<script type="text/javascript" src="static/js/view/search.js"></script>
+		<script type="text/javascript" src="static/js/view/play.js"></script>
+		<script type="text/javascript" src="static/js/view/myMusic.js"></script>
+		<script type="text/javascript" src="static/js/view/myCloudSong.js"></script>
+		<script type="text/javascript" src="keyboard/js/chn_py_word_lib.js" ></script>
+		<script type="text/javascript" src="keyboard/js/keyboard.js" ></script> 
+		
+		<!-- debug js -->
+		<!-- <script type="text/javascript" src="static/js/debug.js"> -->
+		<!-- SiteCatalyst code version: H.26.
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<!-- Ominature tracking -->
+<script type="text/javascript" src="static/js/s_code.js"></script>
+<script type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+	var CHANNEL = "百度音乐";
+	s.pageName="mycadillac:百度音乐:在线音乐首页";
+	s.channel=CHANNEL;
+	
+	/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+	var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+	<script type="text/javascript"><!--
+	if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://gmcchina.sc.omtrdc.net/b/ss/gmccn-carapp-prd/1/H.26--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.26. -->
+		
+</html>

@@ -1,0 +1,28 @@
+<div id="homeview">
+	<div id="titlebar">
+	<!-- 
+		<div id="telbtn" ng-click="hotline('8008202020')"><img src="assests/images/home/telephone_btn.png" border=0 sgm-button the-left="60" /></div>
+	 -->
+		<div id="logobtn"><img src="assests/images/home/buick_logo.png" border=0 /></div>
+		<div id="closebtn" ng-click="shutdownApp()"><img src="assests/images/home/close_btn.png" border=0 /></div>
+	</div>
+	<div id="menubutton">
+		<div id="mb1" class="menu_btn">
+		<img src="assests/images/home/parking_btn.png" border=0 ng-click="gotoview('/parking/1/0/121.59365415573121/31.217425958989562/0')" sgm-button the-left="20" />
+		<!-- <img ng-class="{buttonpressed: parkingit}" ng-mousedown="parkingit=true" ng-mouseup="parkingit=false" src="assests/images/home/parking_btn.png" border=0 ng-click="gotoview('/parking/2/0/121.59365415573121/31.217425958989562/0')"  />  -->
+		<!-- <img ng-class="{buttonpressed: parkingit}" ng-mousedown="parkingit=true"  ng-mouseup="parkingit=false; gotoview('/parking/2/0/121.59365415573121/31.217425958989562/0')" ng-mouseup="parkingit=false" src="assests/images/home/parking_btn.png" border=0 />  -->
+		</div>
+		<div id="mb2" class="menu_btn">
+		<img src="assests/images/home/gasstation_btn.png" border=0 ng-click="gotoview('/gasstation/1/0/121.59365415573121/31.217425958989562/0')" sgm-button the-left="20" />
+		</div>
+		<div id="mb4" class="menu_btn">
+		<img src="assests/images/home/dealer_btn.png" border=0 ng-click="gotoview('/dealer/1/0')" sgm-button the-left="20" />
+		</div>
+		<div id="mb3"  class="menu_btn">
+		<img src="assests/images/home/indicatorlight_btn.png" ng-click="gotoview2('/indicatorlight')" border=0 sgm-button the-left="20" />
+		</div>
+	</div>
+	<img src="assests/images/ibuickguide.png" id="helpview" border=0 ng-hide="helpview">
+</div>
+
+	

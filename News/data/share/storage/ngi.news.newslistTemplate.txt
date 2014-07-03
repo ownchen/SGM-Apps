@@ -1,0 +1,1 @@
+%7B%7B%23items%7D%7D%0A%3Cli%20%7B%7Bclassname%7D%7D%20pk%3D%22%7B%7Bid%7D%7D%22%3E%3Ca%20href%3D%22%23%22%3E%7B%7Btitle%7D%7D%3C/a%3E%0A%09%09%09%09%09%09%3Cspan%3E%7B%7BfriendlyDate%7D%7D%3C/span%3E%3C/li%3E%0A%7B%7B/items%7D%7D%0A

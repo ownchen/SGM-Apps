@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>My AngularJS App</title>
+    <link rel="stylesheet" href="GMLIB/com.gm.widgets.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+<body id="appBody">
+    <!--iframe src="partials/post.html" frameborder="0" scrolling="no" onLoad="{tune_width_height('frame_name');}" name="frame_name"-->
+    <div ng-view></div>
+    <div ng-controller="shiftCtrl" id="shift_changed" class="background popup" ng-show="shift_show">
+        <div class="div_center_bg">
+            <div class="div_center">
+                <!--img id="shift_img" ng-src="img/shift_level_position_{{shift_position}}.png" src="img/shift_level_position_1.png"-->
+                <img id="shift_img" ng-src="img/shift_level_position_{{shift_position}}.png">
+                <div id="shift_text"></div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="GMLIB/com.gm.widgets.js"></script>
+    <script type="text/javascript" src="GMLIB/comm.js"></script>
+    <script type="text/javascript" src="GMLIB/info.js"></script>
+    <script type="text/javascript" src="GMLIB/io.js"></script>
+    <script type="text/javascript" src="GMLIB/media.js"></script>
+    <script type="text/javascript" src="GMLIB/phone.js"></script>
+    <script type="text/javascript" src="GMLIB/system.js"></script>
+    <script type="text/javascript" src="GMLIB/ui.js"></script>
+    <script type="text/javascript" src="GMLIB/voice.js"></script>
+    
+    <!-- SiteCatalyst code version: H.26.
+    Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+    More info available at http://www.omniture.com -->
+    <!--script language="JavaScript" type="text/javascript" src="http://INSERT-DOMAIN-AND-PATH-TO-CODE-HERE/s_code.js"></script-->
+    <script src="js/s_code.js"></script>
+    <script language="JavaScript" type="text/javascript"><!--
+    /* You may give each page an identifying name, server, and channel on
+    the next lines. */
+    s.pageName = "VehicleMonitor:APP首页"
+
+    s.channel = "APP首页"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code = s.t(); if (s_code) document.write(s_code)//--></script>
+    <script language="JavaScript" type="text/javascript"><!--
+    if (navigator.appVersion.indexOf('MSIE') >= 0) document.write(unescape('%3C') + '\!-' + '-')
+    //--></script>
+    <noscript>
+        <img src="http://gmcchina.sc.omtrdc.net/b/ss/gmccn-carapp-prd/1/H.26--NS/0"
+            height="1" width="1" border="0" alt="" />
+    </noscript>
+    <!--/DO NOT REMOVE/-->
+    <!-- End SiteCatalyst code version: H.26. -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/base64.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+</html>

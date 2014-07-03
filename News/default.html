@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>新浪新闻</title>
+	<link rel="Stylesheet" type="text/css" href="trace/tracer.css" />
+	<script type="text/javascript" src="trace/tracer.js" charset="utf-8"></script>
+</head>
+<body>
+	<div id="imgSplash" style="width:100%;height:100%" >
+		<img src="images/001.png" />
+	</div>
+	<link rel="Stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
+	<link rel="Stylesheet" type="text/css" href="css/c.css" />
+	<div id="tracer" style="display:none">
+		<div>
+			<button id="hideTracer">Back</button>
+			<button id="clearTraceLog">Clear</button>
+			<button id="uploadTraceLog">Upload</button>
+		</div>
+		<div id="traceButtons">
+		</div>
+		<div jsp id="tracelogContainer" class="scroll-pane">
+			<ul id="traceLog">
+				<li>log</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="pageBox" style="display:none">
+		
+		<!--头部框架开始-->
+		<div id="topBox">
+			
+		</div>
+		<!--头部框架结束-->
+		<!--主内容框架开始-->
+		<div id="bodyFrameBox" style="overflow: hidden;">
+			<div id="iconBox" style="display:none;">
+				<ul>
+					<li id="li_top" pk="Top"><aside
+							onmouseover="iconOver('head_0',this);"
+							onmouseout="iconOut('head_0',this);">
+							<a href="#"><img src="images/head_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>头条</li>
+					<li pk="World"><aside onmouseover="iconOver('world_0',this);"
+							onmouseout="iconOut('world_0',this);">
+							<a href="#"><img src="images/world_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>国际</li>
+					<li pk="China"><aside onmouseover="iconOver('china_0',this);"
+							onmouseout="iconOut('china_0',this);">
+							<a href="#"><img src="images/china_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>国内</li>
+					<li pk="Life"><aside onmouseover="iconOver('social_0',this);"
+							onmouseout="iconOut('social_0',this);">
+							<a href="#"><img src="images/social_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>社会</li>
+					<li pk="Finance"><aside
+							onmouseover="iconOver('finance_0',this);"
+							onmouseout="iconOut('finance_0',this);">
+							<a href="#"><img src="images/finance_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>财经</li>
+					<li pk="Politics"><aside
+							onmouseover="iconOver('military_0',this);"
+							onmouseout="iconOut('military_0',this);">
+							<a href="#"><img src="images/military_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>军事</li>
+					<li pk="Sports"><aside onmouseover="iconOver('sport_0',this);"
+							onmouseout="iconOut('sport_0',this);">
+							<a href="#"><img src="images/sport_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>体育</li>
+					<li pk="Technology"><aside
+							onmouseover="iconOver('technology_0',this);"
+							onmouseout="iconOut('technology_0',this);">
+							<a href="#"><img src="images/technology_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>科技</li>
+					<li pk="Entertainment"><aside
+							onmouseover="iconOver('amusement_0',this);"
+							onmouseout="iconOut('amusement_0',this);">
+							<a href="#"><img src="images/amusement_01.png" height="110"
+								width="110" border="0"></a>
+						</aside>娱乐</li>
+				</ul>
+			</div>
+			<div id="newsListBox" class="scroll-pane" style="width: 800px; overflow: hidden; padding: 0px;">
+				<ul></ul>
+			</div>
+			<div id="newsListBox2" class="scroll-pane" style="display: none; width: 800px; overflow: hidden; padding: 0px;">
+				<ul>
+					<li><aside class="newsTitleBox2"></aside>
+						<aside class="newsTimeBox2"></aside>
+						<aside class="newsContent2"></aside></li>
+				</ul>
+			</div>
+			<div id="speedDialog">
+                <div class="title" style="margin-top:30px" id="titleOfCurrentNews">
+                </div>
+            <div class="dialog">
+                <div class="warning">
+                    <img src="images/speeddialog/warning.png">
+                </div>
+                <div>
+                <div class="tips">		                    车辆行驶中，仅可使用语音播报或退出应用。
+                </div>
+                <div class="speedDialogBtns">
+                    <div id="btnPlayInSpeedDialog">播报</div>
+                    <div id="btnPQuitInSpeedDialog">退出应用</div>
+
+                </div>
+                </div>
+            </div>
+            <div style="clear:both">
+            </div>
+        </div>	
+
+		</div>
+		<!--主内容框架结束-->
+		<div id="bottomBox" class="bottomBox1">
+			<ul>
+				<li class="back">
+				<div id="li_back" style="display: none" href="#"></div>
+				</li>
+				<li class="refresh" id="btnRefresh"><a href="#"></a></li>
+				<li>
+				<div id="topTitle">国内</div>
+				</li>
+				<li class="sina"><a href="#"><img id="img_sina"
+						src="images/menu.png" width="90" height="60" border="0"></a></li>
+				<!--li class="arrowUp"><a href="#"><img src="images/7.png" width="25" height="14" border="0" /></a></li-->
+				<!---箭头向上-->
+				<!--<li id="li_arrow" class="arrowDown"><a href="#"><img
+						id="img_arrow" src="images/11.png" width="25" height="14"
+						border="0"></a></li>-->
+				<!---箭头向下-->
+				<li class="ttsButton" id="ttsButton"><a href="#"><img
+						src="images/v2/soundon.png" width="97" height="60" border="0"></a><div id="playState" class="anim_cricle" style="display: none">
+                </div></li>
+				<!--<li class="nextButton" id="nextButton"><a href="#"><img
+						src="images/15.png" width="28" height="35" border="0"></a></li>-->
+			</ul>
+		</div>
+	</div>
+	<div id="progressBox" style="display:none;">
+		<div style="z-index: 2010;position: absolute; left: 0px; top: 0px; width: 802px; height: 482px; background-color: rgb(102, 102, 102); opacity: 0.5;">
+		</div>
+		<div id="msgBoxS" et="contentContainer" style="position: absolute; z-index: 2011; left: 293.5px; top: 158.5px;">
+			<div id="msgArrBox_left"></div>
+			<div id="msgArrBox_middle">
+				<div id="msgArrBoxS_loading">
+					<img class="loadingimage" src="images/loading_animation.png">
+				</div>
+				<div id="progressBoxMessage">正在登录...</div>
+				<span></span>
+			</div>
+			<div id="msgArrBox_right"></div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="GMLIB/io.js"></script>
+	<script type="text/javascript" src="GMLIB/system.js"></script>
+	<script type="text/javascript" src="GMLIB/ui.js"></script>
+	<script type="text/javascript" src="GMLIB/voice.js"></script>
+	
+	<script type="text/javascript" src="lib/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="lib/Mustache.js"></script>
+	<script type="text/javascript" src="lib/ngi.gm.common.js"></script>
+	<script type="text/javascript" src="lib/news.ngi.gm.sdk.js"></script>
+	<script type="text/javascript" src="lib/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="lib/jquery.jscrollpane.min.js"></script>
+	
+	<script type="text/javascript" src="js/jspScroller.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="js/ttsplayer.js"></script>
+	<script type="text/javascript" src="js/news.ngi.gm.app.js"></script>
+	
+	<script type="text/javascript" src="debugUtils.js"></script>
+	
+	
+	<script type="text/javascript" src="default.js"></script>
+	
+</body>
+</html>

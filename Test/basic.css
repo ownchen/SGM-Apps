@@ -1,0 +1,17 @@
+/*
+ * Add your Stylesheet contents here
+ * Press Ctrl + Space to see template proposals.
+ */
+
+body {
+	margin:0px;
+	padding:0px;
+}
+
+.view{
+	margin-top:38px;
+	width:800px;
+	height:442px;
+	background:#fff;
+	
+}

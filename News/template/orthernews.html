@@ -1,0 +1,11 @@
+<h3>返回码：{{status.code}}</h3>
+<ul>
+	{{#data}}
+	<li>{{createtime}}来源：[{{media_name}}]<a title="{{title}}" href="newsdetial.html?url={{url}}">{{title}}</a>
+		
+		{{#img}}<br/>
+		<img width=10 height=20 src="{{img}}"/>
+		{{/img}}
+	</li> 
+	{{/data}}
+</ul>

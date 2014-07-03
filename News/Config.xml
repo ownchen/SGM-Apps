@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gmWebApp>
+	<AppID>99535143</AppID>
+	<AppType>RemoteHigh</AppType>
+	<FriendlyName>新浪新闻</FriendlyName>
+	<VehicleStatus>Drive</VehicleStatus>
+	<AutoStart>false</AutoStart>
+	<AppCategory>General</AppCategory>
+	<RemotePath></RemotePath>
+	<IconURL>Icon.png</IconURL>
+	<MainURL>default.html</MainURL>
+	<AppVersion>0.1.0</AppVersion>
+	<IconDisplay>Normal</IconDisplay>
+	<Render>Normal</Render> 
+</gmWebApp>

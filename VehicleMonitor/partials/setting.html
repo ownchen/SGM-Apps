@@ -1,0 +1,49 @@
+<div id="config">
+    <div id="configtop">
+        <div id="backdiv">
+            <button id="backbtn" class="customerbtn"
+                ng-click="back()"
+                onmousedown="this.style.backgroundImage='url(img/setting/back_an.png)';"
+                onmouseup="this.style.backgroundImage='url(img/setting/back.png)';">
+        </div>
+        <div id="configtitle">告警设置</div>
+        <div id="allontitle" ng-click="check_select_all()">告警全开</div>
+        <button id="allonbtn" class="customerbtn configcheckbox"
+            ng-style="{'background-image': 'url(' + allon_url + ')'}"
+            ng-click="check_select_all()">
+    </div>
+
+    <div id="configitems">
+        <div class="configitem" ng-repeat="configitem in configitems">
+            <div class="configitemtop">
+                <img class="configicon" ng-src="img/setting/alert_icon_{{configitem.id}}.png"
+                ng-click="check_selected(configitem.id, configitem.selected)">
+                <label class="configlabel" 
+                ng-class="{true: 'active', false: 'inactive'}[configitem.alertred]"
+                ng-click="check_selected(configitem.id, configitem.selected)">
+                {{configitem.id | CHN}}
+                </label>
+                <button class="customerbtn configcheckbox"
+                    ng-class="{true: 'selected', false: 'unselected'}[configitem.selected]"
+                    ng-click="check_selected(configitem.id, configitem.selected)">
+            </div>
+            <img class="configline" alt="" src="img/setting/set_tiao.png">
+        </div>
+    </div>
+    
+    <div id="speedlimits" ng-show="limitShow">
+        <div class="speedlimitpart" ng-repeat="limit in speedLimits"
+        ng-click="checkSpeedLimit(limit.id, limit.selected)">
+            <img class="limitimg" ng-src="{{limit.url}}">
+            <label class="limittext">{{limit.value}}km/h</label>
+        </div>
+    </div>
+</div>
+
+<div id="configlogo" ng-click="logDisplay();">
+    <div class="div_center_bg">
+        <div class="div_center">
+            <img src="img/setting/set_icon.png">
+        </div>
+    </div>
+</div>

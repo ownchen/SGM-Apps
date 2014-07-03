@@ -1,0 +1,1 @@
+{"system":{"auto_start":1},"user":{"enable_collect":1,"collect_frequency":60000,"enable_upload":1,"upload_frequency":900000},"server":{"server_address":"114.141.129.193","protocol":"http"}}

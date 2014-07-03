@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<link rel="Stylesheet" type="text/css" href="trace/tracer.css" />
+	<script type="text/javascript" src="trace/tracer.js" charset="utf-8"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>新浪天气通</title>
+
+</head>
+<body>
+	<div id="pageBox_Welcome">
+		<!--主内容框架开始-->
+		<div id="content">
+			<img src="images/welcome.png" />
+		</div>
+	</div>
+	<div id="tracer" style="display:none">
+		<div>
+			<button id="hideTracer">Back</button>
+			<button id="clearTraceLog">Clear</button>
+			<button id="uploadTraceLog">Upload</button>
+			<button id="clearAndRestartApp">清空重启</button>
+		</div>
+		<div id="traceButtons">
+		</div>
+		<div jsp id="tracelogContainer" class="scroll-pane">
+			<ul id="traceLog">
+				<li>log</li>
+			</ul>
+		</div>
+	</div>
+	
+	<link rel="Stylesheet" type="text/css" href="keyboard/css/style.css" />
+	<link rel="Stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
+	<link rel="Stylesheet" type="text/css" href="css/style.css" />
+	<link rel="Stylesheet" type="text/css" href="css/sp.css" />
+
+	<div id="progressBox" style="display: none;">
+		<div style="z-index: 2010; position: absolute; left: 0px; top: 0px; width: 802px; height: 482px; background-color: rgb(102, 102, 102); opacity: 0.5;">
+		</div>
+		<div id="msgBoxS" et="contentContainer" style="position: absolute; z-index: 2011; left: 293.5px; top: 158.5px;">
+			<div id="msgArrBox_left"></div>
+			<div id="msgArrBox_middle">
+				<div id="msgArrBoxS_loading">
+					<img class="loadingimage" src="images/loading_animation.png">
+				</div>
+				<div id="progressBoxMessage">正在登录...</div>
+				<span></span>
+			</div>
+			<div id="msgArrBox_right"></div>
+		</div>
+	</div>
+	<div id="customkeyboard" style="z-index: 9999"></div>
+	<div id="pageBox_forecast" style="display: none">
+		<!--头部框架开始-->
+		<div id="topBox_Forecast" class="topBox">
+			<div id="pl" style="top: 80px; left: -webkit-calc(50% -     2 *   15px);">
+				<!--计算公式中，‘5’为分屏数-->
+				<ul id="pl_ul">
+					<li id="pl_li_1" class="Choose"></li>
+					<li id="pl_li_2"></li>
+					<li id="pl_li_3"></li>
+				</ul>
+			</div>
+		</div>
+		<!--头部框架结束-->
+		<!--主内容框架开始-->
+		<div id="bodyFrameBox">
+			<!-- weather -->
+			<div id="dvForcast">
+				<div id="today_dvForcast" class="today">
+					<ul>
+						<li class="arrowLeft"><a href="#">
+							<img class="img_left"
+								src="images/1_1.png" width="36" height="157" border="0"></a></li>
+						<li class="weather">
+							<div id="currentWeather">
+								<ul>
+									<li id="currentWeather_left" style="list-style: none;">
+										<!-- <aside class="releaseTime">20:10发布</aside> -->
+										<aside class="theWeatherCity">北京</aside>
+										<aside class="theWeather">多云</aside>
+										<aside class="theWeather_other">
+											<span>湿度55%&nbsp;&nbsp;</span> <span>东南风2级</span>
+										</aside>
+										<!--<aside class="theWeather_time">
+											<span>02/21&nbsp;&nbsp;</span> <span>周二&nbsp;&nbsp;</span> <span>农历正月三十</span>
+								</aside>-->
+									</li>
+									<li id="currentWeather_right" style="list-style: none;">
+										<aside class="weather_high">
+											最高
+										</aside>
+										<aside class="weather_high_num">19°</aside>
+										<aside class="weather_low">最低</aside>
+										<aside class="weather_low_num">-11°</aside>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="arrowRight"><a href="#">
+							<img class="img_right"
+								src="images/2.png" width="36" height="157" border="0"></a></li>
+					</ul>
+				</div>
+				<div id="otherDay">
+					<div id="otherDayWeahter">
+						<ul>
+							<li class="otherWeahter"
+								style="background: url(images/10.png) 10px 45px no-repeat;">
+								<aside class="">07/25</aside>
+								<aside class="">29℃ 阴</aside>
+								<aside class="">17℃ 多云</aside>
+							</li>
+							<li class="line"></li>
+							<li class="otherWeahter"
+								style="background: url(images/10.png) 10px 45px no-repeat;">
+								<aside class="">07/25</aside>
+								<aside class="">29℃ 阴</aside>
+								<aside class="">17℃ 多云</aside>
+							</li>
+						</ul>
+					</div>
+					<div id="Div2"
+						style="top: 110px; left: -webkit-calc(50% -     2 *   15px); visibility: hidden">
+						<!--计算公式中，'5'为分屏数-->
+						<ul>
+							<li id="pl_li_2_1_1" class="pl_li_2_1 Choose"></li>
+							<li id="pl_li_2_1_2" class="pl_li_2_1"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- weather end -->
+
+			<!--  index -->
+			<div style="display: none" id="dvIndex">
+				<div id="weatherLine" >
+					<ul>
+						<li class="indexReleaseTime">17:20发布</li>
+						<li style="background: url(images/11.png) 5px 7px no-repeat">日出时间
+							04:46</li>
+						<!--天气图片背景图-->
+						<li style="background: url(images/12.png) 5px 7px no-repeat">日落时间
+							19:46</li>
+					</ul>
+				</div>
+				<div id="weatherItem">
+					<div id="today_weatherItem" class="today">
+						<ul>
+							<li class="arrowLeft" style="padding: 20px 0 0 0;"><a
+								href="#">
+								<img class="img_left" src="images/1_1.png"
+									width="36" height="157" border="0"></a></li>
+							<li class="weather">
+								<div id="currentWeatherIndex">
+
+									<!--出行提示代码循环开始-->
+									<div class="weatherPrompt">
+										<aside>
+											<img src="images/15.png" height="60" width="60">
+										</aside>
+										<!---替换图标位置--->
+										<aside>
+											洗车<br>
+											不宜
+										</aside>
+									</div>
+									<!--出行提示代码循环结束-->
+
+									<!--删除-->
+									<div class="weatherPrompt">
+										<aside>
+											<img src="images/16.png" height="60" width="60">
+										</aside>
+										<aside>
+											洗车<br>
+											不宜
+										</aside>
+									</div>
+									<div class="weatherPrompt">
+										<aside>
+											<img src="images/17.png" height="60" width="60">
+										</aside>
+										<aside>
+											洗车<br>
+											不宜
+										</aside>
+									</div>
+									<div class="weatherPrompt">
+										<aside>
+											<img src="images/18.png" height="60" width="60">
+										</aside>
+										<aside>
+											洗车<br>
+											不宜
+										</aside>
+									</div>
+									<div class="weatherPrompt">
+										<aside>
+											<img src="images/15.png" height="60" width="60">
+										</aside>
+										<aside>
+											洗车<br>
+											不宜
+										</aside>
+									</div>
+									<div class="weatherPrompt">
+										<aside>
+											<img src="images/15.png" height="60" width="60">
+										</aside>
+										<aside>
+											洗车<br>
+											不宜
+										</aside>
+									</div>
+									<div class="weatherPrompt">
+										<aside>
+											<img src="images/15.png" height="60" width="60">
+										</aside>
+										<aside>
+											洗车<br>
+											不宜
+										</aside>
+									</div>
+									<div class="weatherPrompt">
+										<aside>
+											<img src="images/15.png" height="60" width="60">
+										</aside>
+										<aside>
+											洗车<br>
+											不宜
+										</aside>
+									</div>
+									<!--删除-->
+
+								</div>
+							</li>
+							<li class="arrowRight" style="padding: 20px 0 0 0;"><a
+								href="#">
+								<img class="img_right" src="images/2.png"
+									width="36" height="157" border="0"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end -->
+
+			<!-- weather line -->
+			<div id="weatherCurve" style="display: none">
+				<div id="today_weatherCurve"  class="today" style="height: 315px;">
+					<ul>
+						<li class="arrowLeft">
+							<a href="#">
+								<img class="img_left" src="images/1_1.png" width="36" height="157" border="0">
+							</a>
+						</li>
+						<li class="weather">
+							<canvas id="canvasBox" width="660" height="330"></canvas>
+						</li>
+						<li class="arrowRight">
+							<a href="#">
+								<img class="img_right" src="images/2.png" width="36" height="157" border="0">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- line end -->
+		</div>
+
+
+		<!--主内容框架结束-->
+		<div id="bottomBox_forecast" class="bottomBox">
+			<ul>
+				<li class="city" id="btn_showMyCity">
+				
+				</li>
+				<li class="refrash" id="btn_refreshForecast" style="width: 97px">
+				</li>
+				<li class="play">
+					<a id="btnPlayTTS" style="width: 97px" href="#">
+						<img src="images/41.png" width="97" height="55" border="0" />
+						<div id="playState" class="anim_cricle" style="display: none">
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- bottom end -->
+	</div>
+
+	<div id="pageBox_cityManageContainer" style="display: none">
+		<div id="topBox" class="topBox" style="background-color: #193E55;">
+		</div>
+		<div id="pageBox_cityManager">
+			<div class="bodyFrameBox2" style="background: #193E55;">
+				<div jsp id="cityManager" class="cityManager scroll-pane">
+					<ul id="ul_cityManager">
+						<li id="li_cityManager_add"><a href="#" class="white">+</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="pageBox_citymanage_add" style="display: none;">
+			<!--主内容框架开始-->
+			<div class="bodyFrameBox2" style="background: #193E55;">
+				<div class="citySearchBox">
+					<aside>
+		<input type="text" id="pageBox_citymanage_text" placeholder="查找" name="key" class="i_citySearch" /></aside>
+					<aside>
+		<input id="btn_pageBox_citymanage_add" type="image" src="images/13_1.png" /></aside>
+				</div>
+
+				<div jsp id="cityManager_add" class="cityManager2 scroll-pane">
+					<ul id="ul_pageBox_citymanage_add">
+						<!--  <li class="cityList"><a href="#" class="white">上海</a></li>-->
+					</ul>
+				</div>
+			</div>
+			<!--主内容框架结束-->
+		</div>
+
+		<div id="pageBox_citymanage_add_country" style="display: none">
+			<!--头部框架开始-->
+			<div id="pageBox_citymanage_add_country_id" style="display: none"></div>
+			<div id="pageBox_citymanage_add_country_title" style="display: none"></div>
+			<!--头部框架结束-->
+			<!--主内容框架开始-->
+			<div class="bodyFrameBox2" style="background: #193E55;">
+				<div class="citySearchBox">
+					<aside>
+							<input type="text" id="pageBox_citymanage_add_country_text" placeholder="查找" name="key" class="i_citySearch" /></aside>
+					<aside>
+							<input id="btn_pageBox_citymanage_add_country" type="image" src="images/13_1.png" /></aside>
+				</div>
+				<div jsp id="cityManager_add_country" class="cityManager2 scroll-pane">
+					<ul id="ul_pageBox_citymanage_add_country">
+					</ul>
+				</div>
+			</div>
+			<!--主内容框架结束-->
+		</div>
+
+		<div id="pageBox_citymanage_delete" style="display: none">
+			<div class="bodyFrameBox2" style="background: #193E55;">
+				<div jsp id="cityManager_delete" class="cityManager scroll-pane">
+					<ul id="ul_pageBox_citymanage_delete">
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="pageBox_citymanage_searchcity" style="display: none;">
+			<!--主内容框架开始-->
+			<div id="bodyFrameBox3" style="background: #193E55;">
+				<div class="citySearchBox">
+					<aside>
+							<input type="text" id="pageBox_citymanage_searchcity_text" placeholder="查找" name="key" class="i_citySearch" /></aside>
+					<aside>
+							<input type="image" id="btn_pageBox_citymanage_searchcity" src="images/13_1.png" /></aside>
+					<!-- <aside><div id="pageBox_citymanage_searchcity_bottonQuit" class="bottonQuit">取消</div></aside> -->
+				</div>
+				<div jsp id="cityManager_searchcity" class="cityManager2 scroll-pane" style="overflow-y: hidden; overflow-x: hidden;">
+					<ul id="ul_pageBox_citymanage_searchcity">
+						<!-- <li class="citySeatchType"><a href="#">省份</a></li>-->
+						<li id="pageBox_citymanage_searchcity_lineBlack" class="lineBlack"></li>
+						<!-- <li class="citySeatchType"><a href="#">城市</a></li>-->
+						<!-- <li class="cityList"><a href="#" class="white">上海</a></li>-->
+					</ul>
+				</div>
+			</div>
+			<!--主内容框架结束-->
+		</div>
+
+		<div style="clear: both;"></div>
+
+		<div id="bottomBox_citymanage" class="bottomBox">
+			<ul>
+				<li class="back" id="li_back"><a href="#" class="white"></a></li>
+				<li class="edit" id="li_edit"><a id="li_a_edit" href="#" class="white"></a></li>
+				<li class="title" id="li_title">我的城市</li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		tracer.info("html loaded, will load js", "startup");
+	</script>
+	<script type="text/javascript" src="GMLIB/comm.js"></script>
+	<script type="text/javascript" src="GMLIB/info.js"></script>
+	<script type="text/javascript" src="GMLIB/io.js"></script>
+	<script type="text/javascript" src="GMLIB/voice.js"></script>
+	<script type="text/javascript" src="GMLIB/ui.js"></script>
+	<script type="text/javascript" src="GMLIB/system.js"></script>
+
+	<script type="text/javascript" src="lib/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="lib/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="js/jspScroller.js"></script>
+
+	<script type="text/javascript" src="lib/ngi.gm.common.js"></script>
+	<script type="text/javascript" src="lib/weather.ngi.gm.sdk.js"></script>
+
+	<script type="text/javascript" src="js/weathers.ngi.gm.storage.js"></script>
+	<script type="text/javascript" src="js/regionAdapter.js"></script>
+	<script type="text/javascript" src="js/userRegionAdpater.js"></script>
+	<script type="text/javascript" src="js/weathersAdpater.js"></script>
+
+	<script type="text/javascript" src="js/ttsplayer.js"></script>
+	<script type="text/javascript" src="js/weather.ngi.gm.app.js"></script>
+<!-- 
+    <script type="text/javascript" src="js/chn_py_word_lib.js"></script>
+    <script type="text/javascript" src="js/keyboard.js"></script>
+	
+ -->
+	<script type="text/javascript" src="basic.js"></script>
+	<script type="text/javascript" src="js/index.citymanage.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/index.welcome.js"></script>
+	<script type="text/javascript" src="js/index.forecast.js"></script>
+	<script type="text/javascript" src="js/index.geo.js"></script>
+	
+</body>
+</html>

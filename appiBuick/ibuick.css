@@ -1,0 +1,1071 @@
+body {
+	/*margin-top:38px;*/
+	margin-top:0px;
+	color:#F00;
+}
+
+.appLoading {
+	position:absolute;
+	top:180px;
+	left:320px;
+	background-image:url('assests/images/home/background.png');
+}
+
+.loading-spinner-container {
+    width: 100%;
+    height:100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    background-color:gray; 
+}
+
+/* style of home page */
+#homeview {
+	position:relative;
+	width:800px;
+	height:442px;
+	background-image:url('assests/images/home/background.png');
+}
+#titlebar {
+	top:10px;
+	height:160px;
+}
+
+#telbtn {
+	position:absolute;
+	left:10px;
+	top:10px;
+	width:180px;
+}
+
+#logobtn {
+	position:absolute;
+	left:320px;
+}
+
+#closebtn {
+	position:absolute;
+	left:720px;
+	top:10px;
+}
+
+#backbtn {
+	position:absolute;
+	left:10px;
+	top:5px
+}
+
+#menubutton {
+	height:160px;
+	top:120px;
+}
+
+.menu_btn {
+	width:200px;
+	float:left;
+	text-align:center;
+	position:relative;
+}
+
+.menu_btn a:link {
+	text-decoration:none;
+	color:#506276;
+	font-weight:800;
+	font-size:19px;
+	outline:none;
+}
+
+.menu_btn a:active {
+	text-decoration:none;
+	color:#506276;
+	font-weight:800;
+	font-size:19px;
+	outline:none;
+}
+
+.menu_btn a:visited {
+	text-decoration:none;
+	color:#506276;
+	font-weight:800;
+	font-size:19px;
+	outline:none;
+}
+
+.menu_btn a:hover {
+	text-decoration:none;
+	color:#506276;
+	font-weight:800;
+	font-size:19px;
+	outline:none;
+}
+
+#helpview {
+	position:fixed;
+	left:0px;
+	top:90px;
+	width:800px;
+	height:390px;
+	pointer-events:none;
+}
+
+/* style of home page */
+
+/* style of layout of sub-page */
+.subpage {
+	position:relative; 
+	width:800px;
+	height:442px;
+}
+
+.navheader {
+	height:70px;
+	background-image:url('assests/images/navbar/navbar_bg.png');
+	position:relative;
+}
+
+.pagetitle {
+	position:relative;
+	left:200px;
+	width:400px;
+	top:7px; 
+	font-size:30px; 
+	color:#333; 
+	text-shadow:0px 1px 0px #ccc;
+	text-align:center;
+}
+.pagetitle2 {
+	position:relative;
+	left:200px;
+	width:300px;
+	top:17px; 
+	font-size:30px; 
+	color:#333; 
+	text-shadow:0px 1px 0px #ccc;
+}
+
+.closebutton{
+	position:absolute;
+	left:720px;
+	top:1px
+}
+
+.bodyarea {
+	background-image:url('assests/images/background.jpg');
+	background-size: 100% 100%;
+	height:372px; 
+	position:relative;
+}
+
+.scrollerbar {
+	position:absolute; 
+	left:20px
+}
+
+.itemblock {
+	position:absolute; 
+	left:115px;
+	top:15px; 
+	height:285px; 
+	width:670px;
+}
+
+/*
+.itemtitle {
+	height:32px; 
+	border-width:15px 15px 1px 15px;
+	-webkit-border-image:url(assests/images/titlebarbg.png) 15 15 1 15 stretch stretch; 
+	-moz-border-image:url(assests/images/titlebarbg.png) 15 15 1 15 stretch stretch;
+}
+*/
+.itemtitle {
+	position:absolute;
+	left:115px;
+	top:15px;
+	width:670px;
+	height:32px;
+	background-color:#5d6169;
+}
+
+/*
+.itembody {
+	height:300px;
+	border-width:1px 15px 15px 15px;
+	-webkit-border-image:url(assests/images/bodybg.png) 1 15 15 15 stretch stretch; 
+	-moz-border-image:url(assests/images/bodybg.png) 1 15 15 15 stretch stretch;
+}
+*/
+
+.itembody {
+	position:absolute;
+	left:115px;
+	top:47px;
+	height:270px;
+	width:670px;
+	background-color:#eeeeee;
+}
+
+/*
+.itembodyblank {
+	height:230px;
+	border-width:1px 15px 15px 15px;
+	-webkit-border-image:url(assests/images/bodybg.png) 1 15 15 15 stretch stretch; 
+	-moz-border-image:url(assests/images/bodybg.png) 1 15 15 15 stretch stretch;
+}
+*/
+.itembodyblank {
+	position:absolute;
+	left:115px;
+	top:47px;
+	height:270px;
+	width:670px;
+	background-color:#eeeeee;
+}
+
+.listbar {
+	position:absolute; 
+	top:0px;
+	left:0px;
+}
+
+.gridbar {
+	position:absolute; 
+	top:10px;
+	left:150px;
+	width:635px;
+}
+
+.home {
+	position:absolute;
+	left:10px;
+	top:5px;
+}
+
+.search {
+	position:absolute;
+	left:450px;
+	top:16px;
+}
+
+.favorlist {
+	position:absolute;
+	left:545px;
+	top:16px;
+}
+
+.popfilter {
+	position:absolute;
+	left:640px;
+	top:16px;
+}
+
+.markermap {
+	position:absolute;
+	left:730px;
+	top:16px;
+}
+
+/* style of layout of sub-page */
+
+/* color price */
+.price {
+	color:#51ccfa;
+}
+
+/* style of parking */
+
+.parkingname {
+	position:absolute; 
+	overflow:hidden; 
+	top:5px; 
+	left:10px; 
+	height:80px;
+	width:440px; 
+	font-size:30px; 
+	color:#323b42;
+	line-height:38px;
+}
+
+.parkingbody {
+	position:absolute; 
+	overflow:hidden; 
+	/*top:62px; */
+	top:80px;
+	left:10px; 
+	height:60px; 
+	width:440px; 
+	font-size:24px; 
+	color:#5f6c76; 
+	line-height:28px;
+}
+
+.parkingprice {
+	position:absolute; 
+	overflow:hidden; 
+	top:130px; 
+	left:10px; 
+	height:120px; 
+	width:440px; 
+	font-size:20px; 
+	color:#5f6c76; 
+	line-height:25px;
+}
+
+.parkingcharge {
+	position:absolute;
+	top:-4px; 
+	left:15px;
+	width:160px;
+	font-size:24px;
+	color:#51ccfa;
+}
+
+.parkingno {
+	position:absolute;
+	top:-4px;
+	left:150px;
+	color:white;
+	font-size:24px
+}
+
+.parkingpn {
+	position:absolute;
+	top:-1px; 
+	left:130px;
+}
+
+.parkingdis {
+	position:absolute;
+	text-align:right;
+	right:20px; 
+	top:-4px;
+	width:150px;
+	font-size:24px;
+	color:#e8f42b;
+}
+
+.parkinginfo {
+	position:absolute; 
+	width:450px;
+}
+
+.parkingbutton {
+	position:absolute; 
+	left:460px;
+}
+
+.categroy {
+	border-radius:3px;
+	display:-moz-inline-box;
+    display:inline-block;
+	height:25px;
+	font-size:16px;
+	background-color:#8093aa; 
+	color:white;
+	line-height:25px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+/* sytle of parking */
+
+/* style of gasstation */
+.gasfav{
+	position:absolute;
+	top:15px;
+	left:10px;
+}
+.gaspath {
+	position:absolute;
+	top:106px;
+	left:10px;
+}
+
+.gasno {
+	position:absolute;
+	top:-4px;
+	left:350px;
+	color:white;
+	font-size:24px
+}
+
+.gasname {
+	position:absolute; 
+	overflow:hidden; 
+	top:15px; 
+	left:10px; 
+	height:80px;
+	width:440px; 
+	font-size:30px; 
+	color:#323b42; 
+	letter-spacing:2px;
+	line-height:38px;
+}
+
+.gasbody {
+	position:absolute; 
+	overflow:hidden; 
+	top:100px; 
+	left:10px; 
+	height:95px; 
+	width:440px; 
+	font-size:24px; 
+	color:#5f6c76;
+	letter-spacing:2px; 
+	line-height:30px;
+}
+
+.gasprice93 {
+	position:absolute;
+	top:-4px; 
+	left:15px;
+	width:160px;
+	font-size:24px;
+	color:#FFF;
+}
+
+.gaspricep {
+	position:absolute;
+	top:-1px; 
+	left:170px;
+}
+
+.gaspricep2 {
+	position:absolute;
+	top:-1px; 
+	left:340px;
+}
+.gasprice97 {
+	position:absolute;
+	top:-4px; 
+	left:186px;
+	width:160px;
+	font-size:24px;
+	color:#FFF;
+}
+
+.gasdis {
+	position:absolute;
+	right:10px; 
+	top:-4px;
+	width:100px;
+	font-size:24px;
+	color:#e8f42b;
+}
+
+.gasinfo {
+	position:absolute; 
+	width:600px;
+}
+
+.gasbutton {
+	position:absolute; 
+	left:460px;
+}
+
+.brand {
+	border-radius:3px;
+	display:-moz-inline-box;
+    display:inline-block;
+	height:25px;
+	line-height:25px;
+	font-size:16px;
+	background-color:#8093aa; 
+	color:white;
+	padding-left:3px;
+	padding-right:3px;
+}
+/* style of gasstation */
+
+/* style of indicatorlight */
+/*
+.indicatorcontent {
+	position:relative;
+	left:10px;
+	top:5px;
+	width:745px;
+	height:270px;
+	border-width:25px 25px 25px 25px;
+	-webkit-border-image:url(assests/images/popupbg.png) 25 25 25 25 stretch stretch; 
+	-moz-border-image:url(assests/images/popupbg.png) 25 25 25 25 stretch stretch;
+}
+*/
+
+.indicatorcontent {
+	position:relative;
+	left:10px;
+	top:5px;
+	padding-left:15px;
+	padding-top:5px;
+	width:760px;
+	height:350px;
+	background-color:#eeeeee;
+}
+
+.indicatoricon {
+	position:absolute;
+	width:152px;
+	height:188px;
+	text-align:center;
+	background-image:url('assests/images/iconbg.png');
+}
+
+.indicatoriconimg {
+	position:relative;
+	top:15px;
+}
+
+.indicatoraction {
+	position:absolute;
+	top:190px;
+}
+
+.indicatortitle {
+	position:absolute;
+	left:170px;
+	width:570px;
+	text-align:center;
+	font-size:26px;
+	color:#5f6c76;
+}
+
+.indicatormsg {
+	position:absolute;
+	left:170px;
+	top:53px;
+	width:570px;
+	height:220px;
+	font-size:20px;
+	color:#5f6c76;
+	line-height:22px;
+}
+.indicatorcontent2{
+	background-image:url('assests/images/background.jpg');
+	height:320px; 
+	position:relative;
+}
+.indicatoricon2 {
+	position:absolute;
+	width:152px;
+	height:188px;
+	left:120px;
+	top:90px;
+	text-align:center;
+	background-image:url('assests/images/iconbg.png');
+}
+.indicatoraction2 {
+	position:absolute;
+	top:190px;
+	left:310px;
+}
+.indicatormsg2 {
+	position:absolute;
+	left:310px;
+	top:90px;
+	width:570px;
+	font-size:36px;
+	color:white;
+	line-height:48px;
+}
+/* style of indicatorlight */
+
+/* popup style */
+.popup-body {
+	position:fixed;
+	z-index:4050;
+	top:0px;
+	left:0px;
+	width:800px;
+	height:442px;
+}
+
+.popup-backdrop {
+	position:fixed;
+	z-index:4000;
+	top:38px;
+	left:0px;
+	width:800px;
+	height:442px;
+	background-color:#000;
+	opacity:.6;
+	filter:alpha(opacity=80);
+}
+
+/*
+.default-popup {
+	position:relative;
+	top:40px;
+	left:170px;
+	width:400px;
+	height:230px;
+	border-width:25px 25px 25px 25px;
+	-webkit-border-image:url(assests/images/popupbg3.png) 25 25 25 25 stretch stretch; 
+}
+*/
+
+.default-popup {
+	position:relative;
+	top:40px;
+	left:170px;
+	width:400px;
+	height:230px;
+	background-color:#eeeeee;
+}
+
+/*
+.confirm-popup {
+	position:relative;
+	top:40px;
+	left:170px;
+	width:400px;
+	height:170px;
+	border-width:25px 25px 25px 25px;
+	-webkit-border-image:url(assests/images/popupbg3.png) 25 25 25 25 stretch stretch; 
+}
+*/
+.confirm-popup {
+	position:relative;
+	top:40px;
+	left:170px;
+	width:400px;
+	height:170px;
+	background-color:#eeeeee;
+}
+
+
+.confirm-popup-title {
+	height:40px;
+	font-size:30px; 
+	text-align:center;
+	color:#323b42;
+}
+
+.comfirm-popup-button {
+	position:absolute;
+	top:33px;
+	left:25px;
+	width:290px;
+	font-size:30px;
+	text-align:center;
+	color:#323b42;
+	height:70px;
+	border-width:0px 25px 0px 25px;
+	-webkit-border-image:url(assests/images/buttonbg.png) 0 25 0 25 stretch stretch; 
+}
+
+.popuptitle {
+	height:40px;
+	font-size:34px; 
+	text-align:center;
+	color:#323b42;
+}
+
+.popupmessage {
+	position:relative;
+	font-size:30px; 
+	top:10px;
+	text-align:center;
+	color:#323b42;
+}
+
+.popupbuttonline {
+	position:relative;
+	height:100px
+}
+/* popup style */
+
+/* style of scroller */
+.scrollercom {
+	position:relative; 
+	width:78px; 
+	top:15px;
+}
+
+.scrollerslide {
+	position:absolute; 
+	top:68px; 
+	left:20px
+}
+
+.scrollercomp {
+	line-height: 0;
+}
+
+.scrollerblock {
+	text-align:center; 
+	line-height: 0;
+}
+
+.scrollerblock img{
+	
+	height:190px;
+}
+
+/* style of scroller */
+
+/* style of dealer */
+.dealerfav{
+	position:absolute;
+	top:45px;
+	left:10px;
+}
+.dealerpath {
+	position:absolute;
+	top:120px;
+	left:10px;
+}
+.dealername {
+	position:relative; 
+	overflow:hidden; 
+	top:10px; 
+	left:1px; 
+	height:50px; 
+	width:540px; 
+	font-size:30px; 
+	color:#323b42; 
+}
+
+.dealerpg {
+	position:absolute;
+	top:-1px; 
+	left:145px;
+}
+
+.dealerno {
+	position:absolute;
+	top:-4px;
+	left:160px;
+	color:white;
+	font-size:24px
+}
+
+.dealeraddr {
+	position:relative; 
+	overflow:hidden; 
+	top:10px; 
+	left:1px; 
+	height:40px; 
+	width:540px; 
+	font-size:24px; 
+	color:#5f6c76; 
+}
+.dealertel {
+	position:relative; 
+	top:20px; 
+	left:1px; 
+	height:60px; 
+	width:540px; 
+	font-size:24px; 
+	color:#5f6c76; 
+	letter-spacing:0px;
+}
+
+/*
+.dealerlistbody {
+	height:230px;
+	border-width:1px 15px 15px 15px;
+	-webkit-border-image:url(assests/images/center_bg01.png) 1 15 15 15 stretch stretch; 
+	-moz-border-image:url(assests/images/center_bg01.png) 1 15 15 15 stretch stretch;
+}
+
+.dealerlistitem {
+	height:60px;
+	border-width:1px 15px 15px 15px;
+	-webkit-border-image:url(assests/images/tit_bg03.png) 1 15 15 15 stretch stretch; 
+	-moz-border-image:url(assests/images/tit_bg03.png) 1 15 15 15 stretch stretch;
+}
+*/
+
+.dealerlistbody {
+	height:230px;
+	border-width:1px 15px 15px 15px;
+}
+
+.dealerlistitem {
+	height:60px;
+	border-width:1px 15px 15px 15px;
+}
+
+.dealeritemname {
+	position:absolute;
+	top:-4px; 
+	left:15px;
+	width:160px;
+	font-size:24px;
+	color:#FFF;
+}
+
+.dealeritemcity {
+	position:absolute;
+	right:20px; 
+	top:-4px;
+	width:80px;
+	font-size:24px;
+	color:#e8f42b;
+}
+
+.dealerinfo {
+	position:absolute; 
+	width:650px;
+}
+
+.dealerbutton {
+	position:absolute; 
+	left:460px;
+}
+
+.dealerdistance {
+	position:absolute;
+	right:25px; 
+	top:6px;
+	width:150px;
+	font-size:22px;
+	color:#FFFF; 
+	text-align:right
+}
+
+/* color distance */
+.price {
+	color:#51ccfa;
+}
+/* style of dealer */
+
+/* style of dealer city list */
+/*
+.listbodyblank {
+	position:absolute; 
+	top:10px;
+	left:130px;
+	height:250px;
+	width:615px;
+	border-width:25px 25px 25px 25px;
+	-webkit-border-image:url(assests/images/popupbg.png) 25 25 25 25 stretch stretch; 
+}
+*/
+.listbodyblank {
+	position:absolute; 
+	top:10px;
+	left:130px;
+	height:250px;
+	width:615px;
+}
+
+
+.listbody {
+	position:absolute; 
+	top:10px;
+	left:130px;
+	height:250px;
+	width:615px;
+}
+
+/* style of dealer city list */
+
+.list-containter {
+	position:absolute;
+	width:650px;
+	height:310px;
+	overflow:hidden;
+}
+
+.default-lister {
+	position:absolute;
+	width:615px;
+	border-width:25px 25px 25px 25px;
+	-webkit-border-image:url(assests/images/popupbg.png) 25 25 25 25 stretch stretch; 
+	-moz-border-image:url(assests/images/popupbg.png) 25 25 25 25 stretch stretch;
+}
+
+.default-listitem {
+	position:relative;
+	font-size:30px;
+	color:#323b42;
+	height:60px;
+	line-height:60px;
+	width:560px;
+	margin-top:8px;
+	border-width:0px 25px 0px 25px;
+	-webkit-border-image:url(assests/images/listbg.png) 0 25 0 25 stretch stretch; 
+	-moz-border-image:url(assests/images/listbg.png) 0 25 0 25 stretch stretch;
+}
+
+.default-griditem {
+	float:left;
+	background-image:url('assests/images/popupbg.png');
+	background-size: 150px 150px; 
+	width:150px;
+	height:150px;
+	margin-left:6px;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.griditemimage {
+	position:relative;
+	left:5px;
+	top:10px;
+}
+
+.errormsg {
+	font-size:24px;
+	color:#323b42;
+	text-align:center;
+	line-height:120px;
+}
+
+.errormsg2 {
+	font-size:24px;
+	color:#323b42;
+	text-align:center;
+	line-height:160px;
+}
+
+/* style of input */
+.inputline {
+	position:absolute;
+	top:60px;
+	height:40px;
+	width:800px;
+	text-align:center;
+	font-size:24px;
+	color:#323b42;
+}
+
+.inputbutton {
+	position:absolute;
+	top:160px;
+	height:30px;
+	width:800px;
+	text-align:center;
+}
+
+.inputtext {
+	width: 600px; 
+	height: 30px;
+	font-size:24px;
+	color:#323b42;
+	background:transparent;
+	border-width:15px 15px 15px 15px;
+	-webkit-border-image:url("assests/images/searchbg.png") 15 15 15 15 stretch stretch; 
+}
+/* style of input */
+
+/* style of popup */
+.popupbuttonb {
+	position: relative; 
+	left: 15px; 
+	width: 320px; 
+	font-size: 30px; 
+	text-align: center; 
+	color: white; 
+	height: 70px; 
+	border-width: 0px 25px 0px 25px; 
+	-webkit-border-image: url(assests/images/popupbg2.png) 0 25 0 25 stretch stretch;
+}
+
+.popupbuttonw {
+	position: relative; 
+	left: 15px; 
+	width: 320px; 
+	font-size: 30px; 
+	text-align: center; 
+	color: #323b42; 
+	height: 70px; 
+	border-width: 0px 25px 0px 25px; 
+	-webkit-border-image: url(assests/images/buttonbg.png) 0 25 0 25 stretch stretch;
+}
+
+.popupbuttonconfirm {
+	position:absolute;
+	top:30px;
+	left:25px;
+	width:100px;
+	font-size:30px;
+	text-align:center;
+	color:#323b42;
+	height:70px;
+	border-width:0px 25px 0px 25px;
+	-webkit-border-image:url(assests/images/buttonbg.png) 0 25 0 25 stretch stretch;
+}
+
+.popupbuttoncancel {
+	position:absolute;
+	top:30px;
+	right:25px;
+	width:100px;
+	font-size:30px;
+	text-align:center;
+	color:#323b42;
+	height:70px;
+	border-width:0px 25px 0px 25px;
+	-webkit-border-image:url(assests/images/buttonbg.png) 0 25 0 25 stretch stretch;
+}
+
+.popupbuttontext {
+	position: relative; 
+	top: 7px;
+}
+/* style of popup */
+
+/* style of filter */
+.filter-popup {
+	position: relative;
+	top: 80px;
+	left: 170px;
+	width: 400px;
+	height: 160px;
+	border-width: 15px 25px 25px 25px;
+	-webkit-border-image: url(assests/images/popupbg3.png) 15 25 25 25 stretch stretch;
+}
+/* style of filter */
+
+/* style of map */
+
+.mapinfo {
+	positon:absolute;
+	height:130px;
+	width:340px;
+	border-radius:3px;
+	border-width: 25px 25px 25px 25px;
+	-webkit-border-image:url(assests/images/map/mappopupbg.png) 25 25 25 25 stretch stretch;
+	padding:0,0,20px,10px;
+}
+
+.mapinfo2 {
+	positon:absolute;
+	height:75px;
+	width:320px;
+	border-radius:3px;
+	border-width: 25px 25px 25px 25px;
+	-webkit-border-image:url(assests/images/map/mappopupbg.png) 25 25 25 25 stretch stretch;
+	padding:0,0,20px,10px;
+}
+.info-top {
+	position:absolute;
+	top:40px;
+	left:60px;
+}
+
+.mappopupclose {
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+
+.info-bottom {
+	position:absolute;
+	top:166px;
+	left:135px;
+}
+
+.info-bottom2 {
+	position:absolute;
+	top:111px;
+	left:135px;
+}
+
+/* style of map */
+
+.buttonpressed {
+	border: 2px solid #E88707;
+}

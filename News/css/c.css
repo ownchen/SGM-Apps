@@ -1,0 +1,1031 @@
+@CHARSET "UTF-8";
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    background-color: #F0F0F0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body, div, span, li, input, textarea, a {
+    font-family: '微软雅黑';
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a:link {
+    color: #333;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a:visited {
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a:hover {
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a:active {
+    color: #333;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a.white:link {
+    color: #FFF;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a.white:visited {
+    color: #FFF;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a.white:hover {
+    color: #FFF;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a.white:active {
+    color: #FFF;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a.green:link {
+    color: #194857;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a.green:visited {
+    color: #194857;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a.green:hover {
+    color: #194857;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+a.green:active {
+    color: #194857;
+    text-decoration: none;
+    font-family: '微软雅黑';
+}
+
+#pageBox {
+    width: 802px;
+    height: 480px;
+}
+
+#topBox {
+    width: 100%;
+    height: 90px;
+    background-color: #333333;
+    position: relative;
+}
+
+#topBanner {
+    width: 406px;
+    height: 100px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#topBanner ul {
+    width: 100%;
+    padding: 17px 0 0 0;
+}
+
+#topBanner li {
+    float: left;
+    height: 65px;
+    width: 100px;
+    line-height: 65px;
+    border-right: 2px solid #873A33;
+    text-align: center;
+    font-size: 22px;
+}
+
+#topBanner li:last-child {
+    border: 0;
+}
+
+#topTitle {
+    height: 60px;
+    line-height: 60px;
+    font-size: 26px;
+    color: #00a0e3;
+    cursor: pointer;
+    text-align: center;
+    background-color: #121212;
+    width: 75px;
+}
+
+#bodyFrameBox {
+    height: 332px;
+    width: 100%;
+    overflow: auto;
+}
+
+#newList {
+    height: 320px;
+    width: 100%;
+}
+
+#newList li {
+    height: 100px;
+    border-bottom: 1px solid #CCC;
+    text-indent: 2em;
+    font-size: 28px;
+    line-height: 60px;
+    background: url(../images/3.png) #F0F0F0 24px 24px no-repeat;
+}
+
+#newList li:last-child {
+    border: 0;
+}
+
+#newList li span {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    color: #333;
+}
+
+#bottomBox {
+    height: 60px;
+    width: 100%;
+    background: /* url(../images/v2/bottomBoxSplitter.png) 165px 0 no-repeat,*/ url(../images/v2/bottomBoxBackground.png) no-repeat;
+}
+
+#bottomBox li {
+    float: left;
+}
+
+#bottomBox li.refresh {
+    margin: 0 1px;
+    width:97px;
+    height: 60px;
+    background: url(../images/reload.png);
+}
+
+#bottomBox li.sina {
+    margin: 0;
+}
+
+#bottomBox li.arrowUp {
+    margin: 20px 0 0 10px;
+    height: 14px;
+}
+
+#bottomBox li.arrowDown {
+    margin: 20px 0 0 10px;
+    height: 14px;
+}
+
+#bottomBox li.back {
+    width: 97px;
+    height: 60px;
+    font-size: 22px;
+    line-height: 37px;
+
+}
+
+#li_back{
+	width: 97px;
+    height: 60px;
+	background: url(../images/v2/back.png);
+}
+
+#newsListBox {
+    width: 100%;
+    overflow: hidden;
+    background: #F0F0F0;
+}
+
+#newsListBox li {
+    width: 100%;
+    height: 95px;
+    border-bottom: 1px solid #CCC;
+    text-indent: 2em;
+    font-size: 28px;
+    line-height: 60px;
+    background: url(../images/3-1.png) #F0F0F0 24px 24px no-repeat;
+    white-space: nowrap;
+}
+
+#newsListBox li a {
+	color:black;
+}
+
+#newsListBox li.mousedown a {
+	color:red;
+}
+
+#newsListBox li.readitem {
+    width: 100%;
+    height: 95px;
+    border-bottom: 1px solid #CCC;
+    text-indent: 2em;
+    font-size: 28px;
+    line-height: 60px;
+    background: url(../images/3-2.png) #F0F0F0 24px 24px no-repeat;
+    white-space: nowrap;
+}
+
+#newsListBox li:last-child {
+    border: 0;
+}
+
+#newsListBox li span {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    color: #333;
+}
+
+#newsListBox2 {
+    overflow: hidden;
+    width: 100%;
+}
+
+.newsTitleBox {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    font-size: 34px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.newsTimeBox {
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    color: #666666;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.newsContent {
+    padding: 25px;
+    font-size: 24px;
+}
+
+.newsTitleBox2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 700px;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.newsTimeBox2 {
+    width: 100%;
+    max-width: 700px;
+	height: 40px;
+    font-size: 24px;
+    color: #666666;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.newsContent2 {
+    max-width: 700px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+#iconBox {
+    /*  padding-top: 20px;*/
+    width: 100%;
+    height: 100%;
+    background: #333333;
+}
+
+#iconBox li {
+    width: 20%;
+    height: 160px;
+    float: left;
+    font-size: 28px;
+    color: #999999;
+    overflow: hidden;
+    line-height: 30px;
+    text-align: center;
+}
+
+#iconBox li aside {
+    width: 110px;
+    height: 110px;
+    margin: 5px auto 0 auto;
+}
+
+#iconBox li#icon1 {
+    background: url(../images/head_01.png) center 0 no-repeat;
+}
+
+#iconBox li#icon2 {
+    background: url(../images/world_01.png) center 20px no-repeat;
+}
+
+#iconBox li#icon3 {
+    background: url(../images/china_01.png) center 20px no-repeat;
+}
+
+#iconBox li#icon4 {
+    background: url(../images/social_01.png) center 20px no-repeat;
+}
+
+#iconBox li#icon5 {
+    background: url(../images/finance_01.png) center 20px no-repeat;
+}
+
+#iconBox li#icon6 {
+    background: url(../images/military_01.png) center 20px no-repeat;
+}
+
+#iconBox li#icon7 {
+    background: url(../images/sport_01.png) center 20px no-repeat;
+}
+
+#iconBox li#icon8 {
+    background: url(../images/technology_01.png) center 20px no-repeat;
+}
+
+#iconBox li#icon9 {
+    background: url(../images/amusement_01.png) center 20px no-repeat;
+}
+
+#iconBox li#icon10 {
+    background: url(../images/auto_01.png) center 20px no-repeat;
+}
+
+/*
+msgbox
+*/
+
+#msgBoxS {
+    text-align: center;
+    height: 165px;
+}
+
+#msgArrBox_left {
+    height: 165px;
+    width: 25px;
+    background: url(../images/20.png) no-repeat 0 0;
+    float: left;
+}
+
+#msgArrBox_middle {
+    height: 165px;
+    background: url(../images/25.png) repeat-x;
+    float: left;
+    position: relative
+}
+
+#msgArrBox_middle span {
+    width: 165px;
+    display: block;
+}
+
+#msgArrBox_right {
+    height: 165px;
+    width: 25px;
+    background: url(../images/20.png) no-repeat right;
+    float: left;
+}
+
+#msgArrBoxS {
+    width: 100%;
+    height: 165px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1002;
+
+}
+
+#msgArrBoxS_loading {
+    width: 100%;
+    height: 83px;
+    margin: 20px auto 0 auto;
+    position: absolute;
+    z-index: 1002;
+
+}
+
+@-webkit-keyframes x-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#msgArrBoxTC {
+    width: 165px;
+    height: 165px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#contentBoxS {
+    height: 60px;
+    line-height: 60px;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 106px;
+}
+
+#msgBoxX {
+    text-align: center;
+    height: 165px;
+}
+
+#msgArrBoxX {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1002;
+    top: 0;
+}
+
+#contentBoxX {
+    width: 165px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    z-index: 1003;
+    top: 106px;
+}
+
+#msgBoxB {
+    background: url(../images/23.png) no-repeat;
+    text-align: center;
+    z-index: 1001;
+    width: 397px;
+    height: 214px;
+    position: relative;
+}
+
+#contentBoxB {
+    width: 397px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    z-index: 1003;
+    top: 0;
+}
+
+#ComfButton {
+    width: 397px;
+    height: 44px;
+    position: absolute;
+    top: 150px;
+    z-index: 1004;
+}
+
+#ComfButton .okButton {
+    width: 122px;
+    height: 35px;
+    background: url(../images/btn2.png) no-repeat;
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+    color: #FFFFFF;
+    float: left;
+    margin: 0 0 0 51px;
+    cursor: pointer;
+}
+
+#ComfButton .cancelButton {
+    width: 122px;
+    height: 35px;
+    background: url(../images/24.png) no-repeat;
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+    color: #FFFFFF;
+    float: left;
+    margin: 0 0 0 51px;
+    cursor: pointer;
+}
+
+#dvMyGroups {
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid 1px #999;
+    width: 380px;
+    left: 362px;
+    top: 51px;
+}
+
+#topBox {
+
+}
+
+.closeButton2 {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    height: 55px;
+    width: 90px;
+    background: url(../images/close.png) no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0.7;
+}
+
+.closeButton2a {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    height: 55px;
+    width: 55px;
+    background: url(../images/close.png) no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0.7;
+}
+
+#topBox .closeButton {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    height: 55px;
+    width: 55px;
+    background: url(../images/close.png) no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#bottomBox li.ttsButton {
+    margin: 0 0 0 1px;
+    position: relative;
+}
+
+#bottomBox li.nextButton {
+    margin: 12px 0 0 30px;
+}
+
+#topBox .goUp {
+    position: absolute;
+    top: 158px;
+    right: 21px;
+    height: 35px;
+    width: 65px;
+    background: url(../images/12.png) no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#topBox .goDown {
+    position: absolute;
+    top: 322px;
+    right: 21px;
+    height: 35px;
+    width: 65px;
+    background: url(../images/13.png) no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.scroll-pane {
+    height: 330px;
+/ / margin : 5 px 0 px 5 px 5 px;
+    margin-left: 5px;
+}
+
+.scroll-pane ul {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.jspPane {
+    width: 730px;
+}
+
+.jspVerticalBar {
+    left: 0;
+	width: 60px;
+    background-color: transparent;
+}
+
+.jspVerticalBar .jspArrow {
+    height: 70px;
+}
+
+.jspArrowDown {
+    background: url(../images/jspScroll/jsp_arrow_down.png) no-repeat;
+}
+
+.jspArrow.jspArrowDown.jspDisabled {
+    background: url(../images/jspScroll/jsp_arrow_down_disabled.png) no-repeat;
+    background-color: transparent;
+}
+
+.jspArrowUp {
+    background: url(../images/jspScroll/jsp_arrow_up.png) no-repeat;
+}
+
+.jspArrow.jspArrowUp.jspDisabled {
+    background: url(../images/jspScroll/jsp_arrow_up_disabled.png) no-repeat;
+    background-color: transparent;
+}
+
+.jspTrack {
+    background: url(../images/jspScroll/jsp_arrow_tracker.png);
+}
+
+.jspDrag {
+    background: url(../images/jspScroll/jsp_arrow_drag.png);
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@-o-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@-o-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    -moz-animation-name: fadeInRight;
+    -o-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+}
+
+@-moz-keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translateX(-20px);
+    }
+}
+
+@-o-keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -o-transform: translateX(-20px);
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+.fadeOutLeft {
+    -webkit-animation-name: fadeOutLeft;
+    -moz-animation-name: fadeOutLeft;
+    -o-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(20px);
+    }
+}
+
+@-moz-keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translateX(20px);
+    }
+}
+
+@-o-keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -o-transform: translateX(20px);
+    }
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+.fadeOutRight {
+    -webkit-animation-name: fadeOutRight;
+    -moz-animation-name: fadeOutRight;
+    -o-animation-name: fadeOutRight;
+    animation-name: fadeOutRight;
+}
+
+/*******以下为2013-7-6 20:13:00加入：fengjun*****/
+#speedDialog {
+    width: 800px;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 0px;
+    background: #333;
+}
+
+#speedDialog .warning {
+    float: left;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+#speedDialog .dialog {
+    width: 600px;
+    margin: 20px auto;
+}
+
+#speedDialog #btnPlayInSpeedDialog {
+    background: url(../images/speeddialog/button_red.png) no-repeat;
+}
+
+#speedDialog #btnPQuitInSpeedDialog {
+    background: url(../images/speeddialog/button_gray.png) no-repeat;
+}
+
+#speedDialog .title  {
+    color: white;
+    font-size: 30px;
+    line-height: 32px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#speedDialog .tips {
+	padding-top:30px;
+	padding-left:190px;
+    color: #E0E0E0;;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.speedDialogBtns {
+    margin-top: 20px;
+    padding-left: 40px;
+}
+
+.speedDialogBtns>div {
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+    width: 165px;
+    height: 60px;
+    float: left;
+    color: #ffffff;
+    margin: 0 20px;
+    font-size: 24px;
+}
+
+.loadingimage{
+	-webkit-animation: spin 1s infinite linear;
+	margin-top: 15px;
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(-360deg); }
+}
+
+#progressBoxMessage {
+	height:60px;
+	line-height:60px;
+	font-size:25px;
+	color:#FFFFFF;
+	text-align:center;
+	padding-top:106px;
+	overflow:hidden;
+	max-width: 700px;
+}
+
+
+@-webkit-keyframes "animsize" {
+    from {
+        -webkit-transform: scale(0.286);
+        border-color: RGBA(255,255,255,0.5);
+    }
+    to {
+        -webkit-transform: scale(1);
+        border-color: RGBA(255,255,255,0.1);
+    }
+}
+
+.anim_cricle {
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -38px;
+    margin-left: -35px;
+    border: 8px solid RGBA(255,255,255,0.5);
+    border-radius: 35px;
+    -webkit-animation-name: "animsize"; /*动画名称，需要跟@keyframes定义的名称一致*/
+    -webkit-animation-duration: 3s; /*动画持续的时间长*/
+    -webkit-animation-timing-function: ease; /*动画播放频率*/
+    -webkit-animation-iteration-count: infinite; /*动画循环播放的次数*/
+}
