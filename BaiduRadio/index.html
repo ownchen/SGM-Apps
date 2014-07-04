@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>百度电台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="assets/css/basic.css" type="text/css" />
+</head>
+
+
+<body onselectstart="return false" onload="javascript:init();">
+
+	<div id="view">
+
+		<div id="first" class="viewpane">
+
+		<!--  	<img src="assets/img/first/loadingView.png" class="logo" />-->
+
+			<div id="firstMsg" class="message"></div>
+
+			<div class="vision">
+				<div>百度音乐车载版 V1.0.0</div>
+				<div>百度公司版权所有</div>
+			</div>
+		</div>
+
+		<div id="loading" class="modal">
+			<div class="error hidden"></div>
+			<img alt="loading" src="assets/img/first/loading.png" />
+		</div>
+
+
+
+		<div id="closeBtn" class="closeBtn btn hidden"></div>
+		<div id="debugAlert"></div>
+		<div class="container hidden">
+			<!-- debug信息显示 -->
+			<div id="debugInfo" class="viewpane hidden">
+				<div id="prevBtn" class="btn">PrevPage</div>
+				<div id="nextBtn" class="btn">NextPage</div>
+				<div id="networkBtn" class="btn">network</div>
+				<div id="infoBoard"></div>
+			</div>
+			<!--频道列表 -->
+			<div id="radioList" class="viewpane"></div>
+			<div id="leftArrowBtn" class="leftArrowBtn btn"></div>
+			<div id="rightArrowBtn" class="rightArrowBtn btn"></div>
+			<!-- 单曲信息显示  -->
+			<div id="songInfo" class="viewpane"></div>
+
+			<!-- 歌词列表 -->
+			<div id="lrc" class="viewpane" style="display: none">
+				<div id="lrcPane"></div>
+			</div>
+
+			<!-- 播放器控制按钮 -->
+			<div id="player" class="player" style="display: none">
+				<div id="favouriveBtn" class="btn">
+					<span class="icon"></span>
+				</div>
+				<div id="playBtn" class="btn">
+					<span class="icon play"></span>
+				</div>
+				<div id="nextSongBtn" class="btn">
+					<span class="icon"></span>
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="popup" class="hidden">
+			<div id="error" class="msgpane hidden">
+				<div class="messageword">程序异常</div>
+				<div class="yesBtn btn">确定</div>
+			</div>
+			<div id="confirm" class="msgpane hidden">
+				<div class="messageword">需要退出吗?</div>
+				<div id="yesBtn" class="yesBtn btn">确定</div>
+				<div id="cancelBtn" class="cancelBtn btn">取消</div>				
+			</div>
+			
+			<div id="retry" class="msgpane hidden">
+				<div class="messageword">需要退出吗?</div>
+				<div  class="yesBtn btn">重试</div>
+				<div  class="cancelBtn btn">取消</div>				
+			</div>
+			
+			<div id="message" class="msgpane hidden">
+				<div class="messageword"></div>
+			</div>
+
+			<div id="load" class="msgpane hidden">
+				<div id="closeLoadBtn" class="closeLoadBtn"></div>
+				<div class="messageword">努力加载中</div>
+				<img class="img" src="assets/img/first/loading.png" />
+			</div>
+		</div>
+
+	</div>
+
+	<!--通用类库  -->
+	<script type="text/javascript" src="GMLIB/com.gm.widgets.js"></script>
+	<script type="text/javascript" src="GMLIB/comm.js"></script>
+	<script type="text/javascript" src="GMLIB/info.js"></script>
+	<script type="text/javascript" src="GMLIB/io.js"></script>
+	<script type="text/javascript" src="GMLIB/media.js"></script>
+	<script type="text/javascript" src="GMLIB/nav.js"></script>
+	<script type="text/javascript" src="GMLIB/phone.js"></script>
+	<script type="text/javascript" src="GMLIB/system.js"></script>
+	<script type="text/javascript" src="GMLIB/ui.js"></script>
+	<script type="text/javascript" src="GMLIB/util.js"></script>
+	<script type="text/javascript" src="GMLIB/voice.js"></script>
+	
+	
+		<!-- 新库的文件名称 -->
+	<script type="text/javascript" src="GMLIB/communication.js"></script>
+	<script type="text/javascript" src="GMLIB/information.js"></script>
+	<script type="text/javascript" src="GMLIB/file.js"></script>
+	<script type="text/javascript" src="GMLIB/audio.js"></script>
+	<script type="text/javascript" src="GMLIB/call.js"></script>
+	<script type="text/javascript" src="GMLIB/system.js"></script>
+	<script type="text/javascript" src="GMLIB/ui.js"></script>
+	<script type="text/javascript" src="GMLIB/sound.js"></script>
+	
+
+	<!-- 第三方库依赖 -->
+	<script type="text/javascript" src="assets/js/libs/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/underscore-min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/backbone-min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/handlebars-v1.3.0.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.timer.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.xml2json.js"></script>
+
+	<!--初始化文件  -->
+	<script type="text/javascript" src="src/init.js"></script>
+
+	<!--自定义公用类 -->
+	<script type="text/javascript" src="src/utility/helper.js"></script>
+	<script type="text/javascript" src="src/utility/rotary.js"></script>
+	<script type="text/javascript" src="src/utility/common.js"></script>
+
+	<!-- Models类文件 -->
+	<script type="text/javascript" src="src/models/catalog.js"></script>
+	<script type="text/javascript" src="src/models/channel.js"></script>
+	<script type="text/javascript" src="src/models/song.js"></script>
+	<script type="text/javascript" src="src/models/lrc.js"></script>
+	<script type="text/javascript" src="src/models/player.js"></script>
+	<script type="text/javascript" src="src/models/favorite.js"></script>
+	<script type="text/javascript" src="src/models/custome.js"></script>
+	<script type="text/javascript" src="src/models/Flags.js"></script>
+
+	<!--  views类文件 -->
+	<script type="text/javascript" src="src/views/home/catalog.js"></script>
+	<script type="text/javascript" src="src/views/home/song.js"></script>
+	<script type="text/javascript" src="src/views/home/lrc.js"></script>
+
+	<script type="text/javascript" src="basic.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment targetId="mtw.filesystem" typeId="org.symbian.tools.tmw.fileSystem">
+<target path="C:/NGI/BaiduRadio4.0.zip" targetId="mtw.filesystem" typeId="org.symbian.tools.tmw.fileSystem"/>
+</deployment>

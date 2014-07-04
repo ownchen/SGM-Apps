@@ -1,0 +1,34 @@
+<div id="radio" class="radio-container">
+	<div class="radioListBar">
+		<div class="radioListContainer">
+			<div class="radioList">
+				<div class="item">
+					{{#each channellist}}
+					<div  channelid="{{this.channelid}}">
+						<span>{{this.name}}</span>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		<div class="topArrow"></div>
+		<div class="bottomArrow"></div>
+	</div>
+
+	<div id="lrc" ></div>
+
+	<div class="radioMiddleView">
+		<div class="radioMiddleViewLogo"
+			style="background-image: url({{songinfo.pic_big}}); background-size: 100%; background-position: initial initial; background-repeat: no-repeat no-repeat;">
+			<div class="playBtn" id="radioPlayBtn"></div>
+			<div class="radioSongArtist">{{songinfo.author}}</div>
+		</div>
+		<div class="radioControlBar">
+			<div class="cloudNo" id="radioCloud"></div>
+			<div class="radioNextBtn" id="radioNextBtn"></div>
+		</div>
+		<div class="BroadCast">
+			<div class="radioSongTitle">{{songinfo.title}}</div>
+		</div>
+	</div>
+</div>

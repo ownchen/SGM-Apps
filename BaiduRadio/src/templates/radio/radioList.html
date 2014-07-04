@@ -1,0 +1,16 @@
+<!-- <div id="radioListBar" class="radioListBar">
+	{{#each channellist}}
+	<div id="{{this.channelid}}" href="channel/{{this.channelid}}">
+		<div class="channel" style="background: url({{this.thumb}}) no-repeat;")"></div>
+		<span>{{this.name}}</span>
+	</div>
+	{{/each}} -->
+
+<div id="radioListBar" class="radioListBar">
+	{{#each channellist}}
+	<div id="{{this.channelid}}" href="channel/{{this.channelid}}">
+		<div class="channel" bg="{{this.thumb}}"></div>
+		<span>{{this.name}}</span>
+	</div>
+	{{/each}}
+</div>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>百度电台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="basic.css" type="text/css" />
+<link rel="stylesheet" href="assets/css/basic.css" type="text/css" />
+<link rel="stylesheet" href="assets/css/jquery.fs.roller.css" type="text/css" />
+
+<style type="text/css">
+
+#radioList li{
+width:100px;
+float:left;
+}
+</style>
+
+
+<script>
+	$(document).ready(function() {
+		$(".rolled").roller();
+
+		$(window).on("snap", function() {
+			$(".rolled").roller("reset");
+		});
+	});
+</script>
+
+</head>
+<body onload="gm.system.init();javascript:init();">
+	<div id="view">
+		<div id="closeBtn" style="display: none"  class="closeBtn btn">CLOSE</div>
+		<div class="container">
+			<!-- debug信息显示 -->
+			<div id="debugInfo" style="display: none" class="viewpane">
+				<div id="prevBtn" class="btn">PrevPage</div>
+				<div id="nextBtn" class="btn">NextPage</div>
+				<div id="networkBtn" class="btn">network</div>
+				<div id="infoBoard"></div>
+			</div>
+
+			<!--频道列表 -->
+			<div id="radioList" class="viewpane">
+				<ul class="rolled">
+					<li><a href="#channel/64">经典</a></li>
+					<li><a href="#channel/64">经典</a></li>
+					<li><a href="#channel/64">经典</a></li>
+					<li><a href="#channel/64">经典</a></li>
+				</ul>
+			</div>
+
+			<!-- 单曲信息显示  -->
+			<div id="songInfo" class="viewpane">
+				<div id="song"></div>
+			</div>
+
+			<!-- 歌词列表 -->
+			<div id="lrc" class="viewpane">
+				<div id="lrcPane"></div>
+			</div>
+
+			<!-- 播放控制按钮 -->
+			<div id="player" style="display: none">
+				<div id="favouriveBtn" class="btn">收藏</div>
+				<div id="playBtn" class="btn">播放</div>
+				<div id="nextSongBtn" class="btn">下一首</div>
+			</div>
+
+			<div id="debugAlert"></div>
+
+			<div id="error" style="display: none"></div>
+
+
+
+		</div>
+	</div>
+
+	<!--通用类库  -->
+	<!-- 	<script type="text/javascript" src="GMLIB/system.js"></script>
+	<script type="text/javascript" src="GMLIB/comm.js"></script>
+	<script type="text/javascript" src="GMLIB/info.js"></script>
+	<script type="text/javascript" src="GMLIB/io.js"></script>
+	<script type="text/javascript" src="GMLIB/media.js"></script>
+	<script type="text/javascript" src="GMLIB/voice.js"></script> -->
+
+
+	<script type="text/javascript" src="GMLIB/com.gm.widgets.js"></script>
+	<script type="text/javascript" src="GMLIB/comm.js"></script>
+	<script type="text/javascript" src="GMLIB/info.js"></script>
+	<script type="text/javascript" sr"E:/JQuery/Roller-master/Roller-master/demo/index.html"c="GMLIB/io.js"></script>
+	<script type="text/javascript" src="GMLIB/media.js"></script>
+	<script type="text/javascript" src="GMLIB/nav.js"></script>
+	<script type="text/javascript" src="GMLIB/phone.js"></script>
+	<script type="text/javascript" src="GMLIB/system.js"></script>
+	<script type="text/javascript" src="GMLIB/ui.js"></script>
+	<script type="text/javascript" src="GMLIB/util.js"></script>
+	<script type="text/javascript" src="GMLIB/voice.js"></script>
+	"E:/JQuery/Roller-master/Roller-master/demo/index.html"
+	<!-- 第三方库依赖 -->
+	<script type="text/javascript" src="assets/js/libs/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/underscore-min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/backbone-min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/handlebars-v1.3.0.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.timer.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.xml2json.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.fs.roller.js"></script>
+
+	<!--初始化文件  -->
+	<script type="text/javascript" src="src/init.js"></script>
+
+	<!--自定义公用类 -->
+	<script type="text/javascript" src="src/utility/helper.js"></script>
+	<script type="text/javascript" src="src/utility/rotary.js"></script>
+	<script type="text/javascript" src="src/utility/common.js"></script>
+
+	<!-- Models类文件 -->
+	<script type="text/javascript" src="src/models/catalog.js"></script>
+	<script type="text/javascript" src="src/models/channel.js"></script>
+	<script type="text/javascript" src="src/models/song.js"></script>
+	<script type="text/javascript" src="src/models/lrc.js"></script>
+	<script type="text/javascript" src="src/models/player.js"></script>
+
+	<!--  views类文件 -->
+	<script type="text/javascript" src="src/views/home/catalog.js"></script>
+	<script type="text/javascript" src="src/views/home/song.js"></script>
+	<script type="text/javascript" src="src/views/home/lrc.js"></script>
+
+	<script type="text/javascript" src="basic.js"></script>
+
+	<script type="text/javascript">
+		function init() {
+			// 注册旋钮事件
+			helper.info.watchRotaryControl();
+
+			// 注册back事件
+			helper.info.watchButtons();
+		}
+	</script>
+
+</body>
+
+</html>

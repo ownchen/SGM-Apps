@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<gmWebApp>
+<RequestedBy>0</RequestedBy>
+<VIN>ALLVINS</VIN>
+<AppID>12030695</AppID>
+<AppVersion>0.1.0</AppVersion>
+<AppType>RemoteHigh</AppType>
+<VehicleStatus>Drive</VehicleStatus>
+<FriendlyName>BaiduRadio4.0</FriendlyName>
+<IconDisplay>Normal</IconDisplay>
+<Render>Normal</Render>
+<LocalPath></LocalPath>
+<RemotePath></RemotePath>
+<IconURL>Icon.png</IconURL>
+<MainURL>index.html</MainURL>
+<SourceLocation>Hybrid</SourceLocation>
+<TrustedApp>true</TrustedApp>
+<AutoStart>false</AutoStart>
+<AppCategory>Audio</AppCategory>
+</gmWebApp>

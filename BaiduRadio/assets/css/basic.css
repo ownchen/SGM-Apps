@@ -1,0 +1,751 @@
+/*
+ * Add your Stylesheet contents here
+ * Press Ctrl + Space to see template proposals.
+ */
+
+/* common style */
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-family: "宋体";
+}
+
+ul,li {
+	margin: 0px;
+	padding: 0;
+	list-style: none;
+}
+
+p,div,span,body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+.disabled {
+	/*visibility:hidden;*/
+	
+}
+
+label {
+	position: relative;
+	display: inline-block;
+	width: 438px;
+	height: 48px;
+	left: 20px;
+	line-height: 40px;
+	text-align: center;
+	color: #000;
+}
+
+#view {
+	 background: url("../img/first/loadingView.png") no-repeat;
+	background-size: 100% 100%; 
+	position: relative;
+	float: left;
+	width: 800px;
+	height: 442px;
+	color: #fff;
+}
+
+.viewpane {
+	position: relative;
+	float: left;
+}
+
+.closeBtn {
+	background: url("../img/xuange/close.png") no-repeat;
+	background-position: center;
+	position: absolute;
+	right: 0px;
+	z-index: 999;
+	width: 60px;
+	height: 60px;
+	background-size: 85%;
+	border: 2px solid transparent;
+}
+
+.closeBtn.selected {
+	background: url("../img/xuange/close.png") no-repeat;
+	background-position: center;
+	background-size: 75%;
+}
+
+.closeLoadBtn {
+	background: url("../img/xuange/close.png") no-repeat;
+	background-position: center;
+	position: absolute;
+	right: 5px;
+	z-index: 999;
+	width: 60px;
+	height: 60px;
+	background-size: 65%;
+}
+
+.closeLoadBtn.selected {
+	background: url("../img/xuange/close.png") no-repeat;
+	background-position: center;
+	background-size: 55%;
+}
+
+
+
+
+.container {
+	background: url("../img/liuxing/back.png") no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: #fff;
+	position: absolute;
+}
+
+.btn {
+	font-size: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.btn.selected {
+	/*border: 2px dotted #20BBF9;*/
+	
+}
+
+.btn.focus {
+	/*border: 2px dotted #20BBF9;*/
+	
+}
+
+.focus {
+	/*border: 2px dotted #20BBF9!important;*/
+	
+}
+
+/* debugInfo debug调试view style */
+#debugAlert {
+	position: absolute;
+	/*left: 50%;
+	top: 50%;
+	margin-top: -27px;
+	margin-left: -152px;	
+	
+	line-height: 50px;
+	font-size: 30px;
+	*/
+	display: none;
+	z-index:9999;	
+	width: 300px;
+	height: 50px;
+	background: #fff;
+	color: red;
+	border: 2px solid red;
+	text-align: center;
+}
+
+#debugInfo {
+	width: 100%;
+	height: 142px;
+	background: olivedrab;
+	font-size: 18px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+#prevBtn {
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 18px;
+	z-index: 10;
+	background: olivedrab;
+}
+
+#nextBtn {
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 18px;
+	z-index: 10;
+}
+
+#networkBtn {
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 18px;
+	z-index: 10;
+	background: olivedrab;
+}
+
+#songBtn {
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 18px;
+	z-index: 10;
+	background: olivedrab;
+}
+
+#infoBoard {
+	position: relative;
+	float: left;
+	height: auto;
+	width: 100%;
+}
+
+/* first loading view */
+#first {
+	/* background: url("assets/img/first/loadingView.png") no-repeat; */
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+#first .logo {
+	position: absolute;
+
+	/* width: 153px;
+	height: 146px;
+	position: relative;
+	left: 50%;
+	margin-left: -77px;
+	margin-top: 85px; */
+}
+
+#first .vision {
+	position: absolute;
+	margin-top: 335px;
+	width: 100%;
+	height: 50px;
+}
+
+.vision div {
+	margin: auto;
+	width: auto;
+	height: 25px;
+	text-align: center;
+}
+/* radioList 电台频道view style */
+#radioList {
+	width: 700px;
+	height: 280px;
+	left: 50%;
+	margin-left: -350px;
+	top: 45px;
+	overflow: hidden;
+}
+
+.leftArrowBtn {
+	position: absolute;
+	width: 60px;
+	height: 300px;
+	top:60px;
+	z-index: 100;
+	background: url("../img/liuxing/lift.png") no-repeat;
+	border: 12px solid transparent;
+	background-position: center right;
+}
+
+.leftArrowBtn.selected {
+	background-position: 13px center;
+}
+
+.rightArrowBtn {
+	position: absolute;
+	right: 0px;
+	width: 60px;
+	height: 300px;
+	top:60px;
+	z-index: 100;
+	background: url("../img/liuxing/right.png") no-repeat;
+	border: 12px solid transparent;
+	background-position: center left;
+}
+
+.rightArrowBtn.selected {
+	background-position: 5px center;
+}
+
+.selectChannelBtn {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	padding: 3px;
+	height: 40px;
+	width: 120px;
+	margin-left: -65px;
+	z-index: 100;
+}
+
+.radioListBar {
+	position: absolute;
+	left: 50px;
+	top: 0px;
+	width: 2000em;
+	height: auto;
+}
+
+.player {
+	width: 394px;
+	height: 81px;
+	overflow: hidden;
+	left: 50%;
+	position: absolute;
+	bottom: 70px;
+	margin-left: -197px;
+}
+
+.radioListBar>div {
+	position: relative;
+	float: left;
+	width: 126px;
+	height: 134px;
+	text-align: center;
+	font-size: 25px;
+	letter-spacing: 1.3px;
+	background: url("../img/liuxing/xiao.png") no-repeat;
+	margin: 29px 0px;
+	border: 2px solid transparent;
+}
+
+.radioListBar span {
+	display: block;
+	height:33px;
+	line-height:30px;
+	padding-top: 8px;
+}
+
+.radioListBar>div.selected {
+	background: url("../img/liuxing/BLUE.png") no-repeat;
+	background-size: 100%;
+}
+
+.radioListBar>div.playing {
+	background: url("../img/liuxing/back big.png") no-repeat;
+	background-size: 100%;
+	width: 184px;
+	height: 186px;
+	margin: 0px 6px;
+	background-position-y: center;
+}
+
+.radioListBar>div.playing.focus {
+	background: url("../img/liuxing/BLUE.png") no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+
+.radioListBar .channel {
+	width: 101px;
+	height: 101px;
+	padding: 0px;
+	margin: 0px;
+	border-radius: 50%;
+	background-size: 100% auto;
+	background-position: center;
+	border: 0px;
+	margin-left: 11px;
+	margin-top: 12px;
+}
+
+.radioListBar .playing .channel {
+	width: 152px;
+	height: 152px;
+	margin: 14.4px 0px 0px 14.2px;
+}
+
+.channel>span {
+	line-height: 30px;
+	text-align: center;
+	padding: 44px 0px;
+	display: block;
+}
+
+.playing>span {
+	color: #fff;
+	font-size: 30pt;
+	line-height: 45px;
+	display: block;
+	bottom: -43px;
+	position: absolute;
+	width: 250px;
+	height:auto;
+	left: 50%;
+	margin-left: -125px;
+}
+
+.selectedChannel {
+	font-weight: bolder;
+	color: red !important;
+}
+
+.currentChannel {
+	color: orange;
+}
+
+/* songInfo 歌曲信息及控制view style */
+#songInfo {
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	background-color: rgba(45, 45, 45, 0.8);
+	overflow: hidden;
+	height: 50px;
+}
+
+#songInfo.up {
+	width: 100%;
+	position: absolute;
+	bottom: 120px;
+}
+
+#currentInfo {
+	width: 100%;
+	position: relative;
+	float: left;
+	line-height: 45px;
+	font-size: 25px;
+	color: #20BBF9;
+	letter-spacing: 1.3px;
+	padding-left: 10px;
+	font-weight:bolder;
+	padding-top:5px;
+}
+
+#currentInfo div {
+	margin: auto;
+	width: auto;
+	text-align: center;
+}
+
+#currentChannelName {
+	color: #fff;
+	padding: 0px 20px 0px 40px;
+	background: url("../img/icon_new_03.png") no-repeat;
+	background-position: left 6px;
+	height: 45px;
+	display: inline-block;
+	position: relative;
+	float: left;
+}
+
+#currentSongName {
+	color: #fff;
+	padding-right: 20px;
+	padding-left:55px;
+	display:inline-block;
+	position:relative;
+	float:left;
+	max-width: 400px;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#currentSongName.play{
+	background:url("../img/music.png") no-repeat;
+	background-position: left 10px;
+	background-size: auto 64%;
+}
+#currentSongName.pause{
+	background:url("../img/play2.gif") no-repeat;
+	background-position: left 10px;
+	background-size: auto 64%;
+}
+
+#currentSongArtist {
+	color: #aaa;
+	font-size:20px;
+	max-width: 250px;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	padding-top: 3px;
+}
+
+#playBtn,#favouriveBtn,#nextSongBtn {
+	position: relative;
+	float: left;
+	width: 81px;
+	height: 79px;
+	border: 2px solid transparent;
+	margin: 0px 25px;
+}
+
+#playBtn,#favouriveBtn,#nextSongBtn {
+	background: url("../img/liuxing/Untitled-1_11.png") no-repeat;
+}
+
+#playBtn.focus,#favouriveBtn.focus,#nextSongBtn.focus {
+	background: url("../img/liuxing/zui.png") no-repeat;
+	background-position: 0px -2px;
+}
+
+#favouriveBtn .icon {
+	background: url("../img/liuxing/heard.png") no-repeat;
+	width: 100%;
+	height: 100%;
+	background-position: 12px 18px;
+	display: block;
+}
+
+#favouriveBtn.favoried .icon {
+	background: url("../img/liuxing/red.png") no-repeat;
+	width: 100%;
+	height: 100%;
+	background-position: 10.5px 18px;
+	display: block;
+}
+
+#playBtn .stop.icon {
+	background: url("../img/liuxing/STOPWHITE.png") no-repeat;
+	width: 100%;
+	height: 100%;
+	background-position: 22.5px 17px;
+	display: block;
+}
+
+#playBtn.selected .stop.icon {
+	background: url("../img/liuxing/STOPBLUE.png") no-repeat;
+	background-position: 22.5px 17px;
+}
+
+#playBtn .play.icon {
+	background: url("../img/liuxing/playwhite.png") no-repeat;
+	width: 100%;
+	height: 100%;
+	background-position: 25px 17px;
+	display: block;
+	display: block;
+}
+
+#playBtn.selected .play.icon {
+	background: url("../img/liuxing/playblue.png") no-repeat;
+	background-position: 25px 17px;
+}
+
+#nextSongBtn .icon {
+	background: url("../img/liuxing/white.png") no-repeat;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	display: block;
+}
+
+#nextSongBtn.selected .icon {
+	background: url("../img/liuxing/BLUE 2.png") no-repeat;
+	background-position: center;
+}
+
+/* lrc歌词view style */
+#lrc {
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+}
+
+#error {
+	position: relative;
+	width: 100%;
+	height: 20px;
+	background: mediumseagreen;
+	overflow: hidden;
+}
+
+#lrcPane {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+}
+
+#lrcPane li {
+	height: 50px;
+	display: none;
+}
+
+.normalLyric {
+	color: #545454;
+	text-align: center;
+}
+
+.currentLyric {
+	text-align: center;
+	color: #0f6eb2;
+	font-size: 30px;
+	line-height: 30px;
+}
+
+/* logout view style */
+#logout {
+	width: 400px;
+	height: 100px;
+	background: #000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -200px;
+	z-index: 999;
+}
+
+#logout .btn {
+	width: 196px;
+	position: relative;
+	float: left;
+	margin: 15px 0px;
+}
+
+/*
+新加样式
+*/
+.modal {
+	z-index: 1000;	
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+.error {
+	margin-left: -50%;
+	margin-top: 65px;
+	color: red;
+}
+
+
+.modal img{
+	margin-left: -37px;
+	margin-top: 40px;
+	-moz-animation: spin 2s infinite linear;
+	-webkit-animation: spin 2s infinite linear;
+	-moz-animation: spin 2s infinite linear;
+}
+
+
+#load .img{
+	z-index: 1000;
+	-moz-animation: spin 3s infinite ease-in-out;
+	-webkit-animation: spin 3s infinite ease-in-out;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left:-37px;
+	margin-top: 20px;
+	-moz-animation: spin 3s infinite ease-in-out;
+}
+
+@-moz-keyframes spin { 0% {	-moz-transform: rotate(0deg);}
+100%{-moz-transform:rotate(360deg)}}
+@-webkit-keyframes spin { 0% {-webkit-transform: rotate(0deg);}
+100%{-webkit-transform:rotate(360deg)}}
+
+
+.message {
+	z-index: 1000;
+	display: none;
+	position: fixed;
+	top: 85%;
+	left: 50%;
+}
+
+body.loading {
+	overflow: hidden;
+}
+
+body.loading .modal {
+	display: block;
+}
+
+#popup {
+	background: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9999;
+}
+
+#popup .msgpane {
+	position: absolute;
+	width: 408px;
+	height: 228px;
+	background: url("../img/xuange/d back.png") no-repeat;
+	background-position: center;
+	left: 50%;
+	top: 50%;
+	margin-left: -204px;
+	margin-top: -114px;
+}
+
+#popup .btn.focus {
+/*	border: 2px solid #20BBF9;*/
+}
+
+#popup .btn {
+	position: relative;
+	float: left;
+	width: 160px;
+	height: 61px;
+	background: url("../img/xuange/none.png") no-repeat;
+	margin: 0px 4px;
+	line-height: 57px;
+	border: 2px solid transparent;
+}
+
+#popup .btn.selected {
+	background: url("../img/xuange/sure.png") no-repeat;
+}
+
+#confirm .cancelBtn, #retry .cancelBtn{
+	margin-right: 40px;
+	float: right;
+}
+
+#confirm .yesBtn, #retry .yesBtn {
+	margin-left: 40px;
+	float: left;
+}
+
+#popup .messageword {
+	height:124px;
+	padding: 45px;
+	margin-top: 10px;
+	font-size: 30px;
+	text-align: center;
+	line-height:120%;
+}
+
+#message .messageword {
+	font-size: 30px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#error .btn {
+	left: 50%;
+	margin-left: -78px;
+}
