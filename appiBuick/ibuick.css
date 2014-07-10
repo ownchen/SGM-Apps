@@ -42,12 +42,13 @@ body {
 #logobtn {
 	position:absolute;
 	left:320px;
+	margin-top:7px;
 }
 
 #closebtn {
 	position:absolute;
-	left:720px;
-	top:10px;
+	left: 733px;
+	top: 12px;
 }
 
 #backbtn {
@@ -128,7 +129,7 @@ body {
 	position:relative;
 	left:200px;
 	width:400px;
-	top:7px; 
+	top:17px; 
 	font-size:30px; 
 	color:#333; 
 	text-shadow:0px 1px 0px #ccc;
@@ -146,12 +147,12 @@ body {
 
 .closebutton{
 	position:absolute;
-	left:720px;
-	top:1px
+	left: 733px;
+	top: 12px;
 }
 
 .bodyarea {
-	background-image:url('assests/images/background.jpg');
+	background-image:url('assests/images/background.png');
 	background-size: 100% 100%;
 	height:372px; 
 	position:relative;
@@ -181,7 +182,7 @@ body {
 .itemtitle {
 	position:absolute;
 	left:115px;
-	top:15px;
+	top:37px;
 	width:670px;
 	height:32px;
 	background-color:#5d6169;
@@ -199,8 +200,8 @@ body {
 .itembody {
 	position:absolute;
 	left:115px;
-	top:47px;
-	height:270px;
+	top:70px;
+	height:280px;
 	width:670px;
 	background-color:#eeeeee;
 }
@@ -230,7 +231,7 @@ body {
 
 .gridbar {
 	position:absolute; 
-	top:10px;
+	top:38px;
 	left:150px;
 	width:635px;
 }
@@ -277,9 +278,9 @@ body {
 .parkingname {
 	position:absolute; 
 	overflow:hidden; 
-	top:5px; 
+	top:31px; 
 	left:10px; 
-	height:80px;
+	height:75px;
 	width:440px; 
 	font-size:30px; 
 	color:#323b42;
@@ -290,7 +291,7 @@ body {
 	position:absolute; 
 	overflow:hidden; 
 	/*top:62px; */
-	top:80px;
+	top:111px;
 	left:10px; 
 	height:60px; 
 	width:440px; 
@@ -302,9 +303,9 @@ body {
 .parkingprice {
 	position:absolute; 
 	overflow:hidden; 
-	top:130px; 
+	top: 168px;
 	left:10px; 
-	height:120px; 
+	height: 110px;
 	width:440px; 
 	font-size:20px; 
 	color:#5f6c76; 
@@ -313,7 +314,7 @@ body {
 
 .parkingcharge {
 	position:absolute;
-	top:-4px; 
+	top:3px; 
 	left:15px;
 	width:160px;
 	font-size:24px;
@@ -322,7 +323,7 @@ body {
 
 .parkingno {
 	position:absolute;
-	top:-4px;
+	top:3px;
 	left:150px;
 	color:white;
 	font-size:24px
@@ -330,7 +331,7 @@ body {
 
 .parkingpn {
 	position:absolute;
-	top:-1px; 
+	top:3px; 
 	left:130px;
 }
 
@@ -338,7 +339,7 @@ body {
 	position:absolute;
 	text-align:right;
 	right:20px; 
-	top:-4px;
+	top:3px;
 	width:150px;
 	font-size:24px;
 	color:#e8f42b;
@@ -372,18 +373,18 @@ body {
 /* style of gasstation */
 .gasfav{
 	position:absolute;
-	top:15px;
+	top:40px;
 	left:10px;
 }
 .gaspath {
 	position:absolute;
-	top:106px;
+	top:120px;
 	left:10px;
 }
 
 .gasno {
 	position:absolute;
-	top:-4px;
+	top:3px;
 	left:350px;
 	color:white;
 	font-size:24px
@@ -417,7 +418,7 @@ body {
 
 .gasprice93 {
 	position:absolute;
-	top:-4px; 
+	top:3px; 
 	left:15px;
 	width:160px;
 	font-size:24px;
@@ -437,7 +438,7 @@ body {
 }
 .gasprice97 {
 	position:absolute;
-	top:-4px; 
+	top:3px; 
 	left:186px;
 	width:160px;
 	font-size:24px;
@@ -447,7 +448,7 @@ body {
 .gasdis {
 	position:absolute;
 	right:10px; 
-	top:-4px;
+	top:3px;
 	width:100px;
 	font-size:24px;
 	color:#e8f42b;
@@ -492,14 +493,14 @@ body {
 */
 
 .indicatorcontent {
-	position:relative;
-	left:10px;
-	top:5px;
-	padding-left:15px;
-	padding-top:5px;
-	width:760px;
-	height:350px;
-	background-color:#eeeeee;
+	position: relative;
+	left: 23px;
+	top: 41px;
+	padding-left: 21px;
+	padding-top: 25px;
+	width: 736px;
+	height: 265px;
+	background-color: #eeeeee;
 }
 
 .indicatoricon {
@@ -531,9 +532,9 @@ body {
 
 .indicatormsg {
 	position:absolute;
-	left:170px;
-	top:53px;
-	width:570px;
+	left: 196px;
+	top: 67px;
+	width: 540px;
 	height:220px;
 	font-size:20px;
 	color:#5f6c76;
@@ -630,11 +631,12 @@ body {
 	width:400px;
 	height:170px;
 	background-color:#eeeeee;
+	padding:20px 0;
 }
 
 
 .confirm-popup-title {
-	height:40px;
+	height:81px;
 	font-size:30px; 
 	text-align:center;
 	color:#323b42;
@@ -648,7 +650,7 @@ body {
 	font-size:30px;
 	text-align:center;
 	color:#323b42;
-	height:70px;
+	height:58px;
 	border-width:0px 25px 0px 25px;
 	-webkit-border-image:url(assests/images/buttonbg.png) 0 25 0 25 stretch stretch; 
 }
@@ -678,7 +680,7 @@ body {
 .scrollercom {
 	position:relative; 
 	width:78px; 
-	top:15px;
+	top:39px;
 }
 
 .scrollerslide {
@@ -894,7 +896,8 @@ body {
 	background-image:url('assests/images/popupbg.png');
 	background-size: 150px 150px; 
 	width:150px;
-	height:150px;
+	height:155px;
+	margin-top: 5px;
 	margin-left:6px;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -1003,7 +1006,7 @@ body {
 
 .popupbuttontext {
 	position: relative; 
-	top: 7px;
+	top: 18px;
 }
 /* style of popup */
 
