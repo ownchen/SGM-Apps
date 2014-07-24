@@ -27,7 +27,8 @@ ibuickApp.directive('sgmScroller', function() {
 				startY = 60;
 				currentPos = scope.initpos;
 				if(scope.maxno > 1 && scope.initpos >= 0) {
-					steps  = 118 / (scope.maxno -1);
+					steps  = 146 / (scope.maxno -1);
+					
 					posY = startY + scope.initpos * steps;
 					slider.style.top = posY + "px";
 				} else {
@@ -65,6 +66,7 @@ ibuickApp.directive('sgmScroller', function() {
 			});
 			
 			downarrow.bind('click', function(event) {
+				
 				if(scope.busying == true) {
 					return;
 				}

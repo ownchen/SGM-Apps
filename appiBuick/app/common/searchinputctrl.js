@@ -23,6 +23,9 @@ ibuickApp.controller('CtrlSearchInputView', function ($scope, iBuickData, $locat
 	};
 	
 	$scope.search = function() {
+		iBuickData.sharedObject.searhKeyword=document.getElementById("searhKeyword").value;
+		console.log(iBuickData.sharedObject.searhKeyword)
+//		alert(iBuickData.sharedObject.searhKeyword)
 		$timeout(function () {
 			if(angular.isUndefined(iBuickData.sharedObject.searhKeyword) || iBuickData.sharedObject.searhKeyword == "") {
 				$timeout(function() {

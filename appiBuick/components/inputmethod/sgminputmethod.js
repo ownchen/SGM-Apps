@@ -7,20 +7,25 @@
 			textinput: "=",
 			searchit: "&",
 			search: "&"
-		},
+		}
+	,
 		link: function (scope, element, attrs) {
-			var keyBoardObj = $("#customkeyboard").keyboard({
-				doneCallback: function (d) {
-					//alert(d.target.input[0].value);
-					scope.textinput = d.target.input[0].value;
-					//scope.$apply(scope.textinput);
-					scope.searchit({wordinput:scope.textinput});
-				},
-				EmptyValueCallback: function () {
-				},
-				returnCallback: function () {
-				}
-			});
+			
+			
+			
+			//alert("aa")
+//			var keyBoardObj = $("#customkeyboard").keyboard({
+//				doneCallback: function (d) {
+//					//alert(d.target.input[0].value);
+//					scope.textinput = d.target.input[0].value;
+//					//scope.$apply(scope.textinput);
+//					scope.searchit({wordinput:scope.textinput});
+//				},
+//				EmptyValueCallback: function () {
+//				},
+//				returnCallback: function () {
+//				}
+//			});
 		}
 	};
 });
