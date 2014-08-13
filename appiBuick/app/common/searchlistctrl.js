@@ -21,6 +21,7 @@ ibuickApp.controller('CtrlSearchListView', function ($scope, remoteServiceFactor
 
     function init() {
     	$scope.errormsg = "搜索中......";
+    	$scope
 		iBuickData.sharedObject.searchResults = [];
 		//var keyword = "上海南站";
 		var keyword = iBuickData.sharedObject.searhKeyword;
@@ -91,6 +92,7 @@ ibuickApp.controller('CtrlSearchListView', function ($scope, remoteServiceFactor
 	};
 
 	$scope.clickedrow = function (index) {
+		
 		if(angular.isDefined(iBuickData.sharedObject.searchResults[index]))
 		var words = iBuickData.sharedObject.searchResults[index].title;
 		//$log.log(words);

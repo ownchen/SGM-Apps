@@ -15,6 +15,7 @@ ibuickApp.directive('sgmScroller', function() {
 			//element.css("height", scope.divHeight+"px");
 			//element.css("width",  scope.divWidth+"px");
 			var slider = element.find('div')[3];
+			
 			var uparrow =  angular.element(element.find('div')[0]);
 			var downarrow =  angular.element(element.find('div')[2]);
 			
